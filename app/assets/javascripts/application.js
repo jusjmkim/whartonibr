@@ -17,3 +17,28 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$(function(){
+      $("#slides").slidesjs({
+        width: 940,
+        height: 500,
+        pagination: {
+          active: true,
+        },
+        navigation: {
+          active: false
+        },
+        play: {
+          active: true,
+          effect: 'slide',
+          interval: 2000,
+          auto: true,
+          swap: true
+        },
+        effect: {
+          slide: {
+            speed: 3000
+          }
+        }
+      });
+    });

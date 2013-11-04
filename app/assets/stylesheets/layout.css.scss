@@ -1,1 +1,176 @@
 @import 'colors';
+
+.menu-left {
+  background-color: $dark-grey;
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+.top-bar .title-area {
+  margin-left: 25px;
+}
+
+.top-bar-section li, .top-bar-section ul, .menu-left {
+  background-color: $dark-grey;
+  font-size: 1.1em;
+}
+
+// hack to get around foundation's bullshit -- there's gotta be a better way
+.top-bar-section li a:not(.button), .menu-left a {
+  margin-top: 3px;
+  line-height: 18px;
+  padding: 10px 65px;
+  text-align: center;
+}
+
+.top-bar-section li a:not(.button).standout-primary, .menu-left a {
+  font-weight: normal;
+  color: white;
+  border-radius: 5px;
+  background: #144e9a;
+  &:hover {
+    background: lighten($dark-grey, 10%);
+  }
+}
+
+input.standout-primary {
+  font-weight: normal;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  margin-left: 35%;
+  color: white;
+  background: $dark-grey;
+  &:hover {
+    background: lighten($dark-grey, 10%);
+  }
+}
+
+input.standout {
+  font-weight: normal;
+  font-size: 3em;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  margin-left: 35%;
+  color: white;
+  background: black;
+  &:hover {
+    background: lighten(black, 10%);
+  }
+}
+
+.top-bar-section li a:not(.button).standout {
+  font-weight: normal;
+  color: white;
+  background: $dark-grey;
+  border-radius: 5px;
+  &:hover {
+    background: lighten($dark-grey, 20%);
+  }
+}
+
+.top-bar-section li .menu-link:hover, .menu-link:hover{
+    color: $red;
+    // border-bottom: 5px solid $red;
+}
+
+.btn {
+  margin-right: 40px;
+}
+
+input .text-box:focus {
+  border-color: $red;
+}
+
+#sign-up, #login {
+  width: 30%;
+  margin-top: 5%;
+  margin-left: -16%;
+}
+
+#calendar {
+  margin-top: 5%;
+  display: block;
+}
+
+// Classes activated and deactivated through javascript
+
+.top-bar-section li a.js-non-hovered {
+    color: lighten($dark-grey, 50%);
+}
+
+.logo-holder{
+  width: 45%;
+  padding: 0px;
+}
+.logo { 
+  // baground-attachment: fixed;
+  // background-repeat: no-repeat;
+  // background-size: 100%;ck
+  width: 100%;
+  margin-top: 5px;
+}
+
+.home-page-holder{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  opacity: 50%;
+  padding: 40px;
+  width: 27%;
+  font-weight: normal;
+  color: $dark-grey;
+  position: relative; 
+  top: 35%;
+  left: 37%;
+  font-size: 20px;  
+  line-height: 30px;
+}
+
+.emphasis{
+  color: $red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.emphasis2{
+  color: $red;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+.sign-up-errors {
+  font-size: .75em;
+  color: red;
+  p {
+    margin-bottom: 3px;
+  }
+}
+
+body, .menu-link, .top-bar {
+  background-color: $dark-grey;
+}
+
+.top-bar{
+  padding-bottom: 60px; 
+  margin-bottom: 0px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 100;
+  width: 100%;
+}
+
+.top-bar-section li a:not(.button), .menu-left a{
+  background-color: $dark-grey; 
+}
+
+body{
+  background-color: white;
+}
+

@@ -13,18 +13,34 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-
-  	<%= stylesheet_link_tag    "application" %>
-  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+  	<title><%= content_for?(:title) ? yield(:title) : "International Business Review" %></title>
+  	
+    <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Montserrat:400,700' %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <div class="sticky">
+      <nav class="top-bar">
+        <section class="top-bar-section">
+          <ul class="left">
+            <li class="menu-left"><a class="menu-link" href="#">Home</a></li>
+            <li class="menu-left"><a class="menu-link" href="#">About Us</a></li>
+            <li class="menu-left"><a class="menu-link" href="#">Executive Board</a></li>
+            <li class="menu-left"><a class="menu-link" href="#">Past Issues</a></li>
+            <li class="menu-left"><a class="menu-link" href="#">Subscribe</a></li>
+          </ul>
 
-    <%= yield %>
+        </section>
+      </nav>
+    </div>
 
-    
-    <%= javascript_include_tag "application" %>
+    <div id='<%= "#{params[:controller].parameterize}" %>' class='<%= "#{params[:action]}" %>'>
+      <%= yield %>
+    </div>
+
   </body>
 </html>
