@@ -11,11 +11,11 @@
 
 #logo-holder{
   position: fixed; 
-  top: 20px;
+  top: 5px;
   left: 30px;
   z-index: 100;
-  width: 120px;
-  height: 100px;
+  width: 240px;
+  height: 200px;
   color: $red;
 
 }
@@ -57,11 +57,11 @@ body {
       // margin: 6px 0 0;
       // float: right;
       list-style: none;
-      width: 100px;
+      width: 170px;
       margin: auto;
       position: absolute;
       bottom: 100px;
-      left: 50%;
+      left: 42%;
       z-index: 100;
     }
 
@@ -72,22 +72,23 @@ body {
 
     .slidesjs-pagination li a {
       display: block;
-      width: 13px;
+      width: 24px;
       height: 0;
-      padding-top: 13px;
+      padding-top: 24px;
       background-image: url(pagination.png);
       background-position: 0 0;
       float: left;
       overflow: hidden;
+      margin-right: 3px;
     }
 
     .slidesjs-pagination li a.active,
     .slidesjs-pagination li a:hover.active {
-      background-position: 0 -13px
+      background-position: 0 -24px
     }
 
     .slidesjs-pagination li a:hover {
-      background-position: 0 -26px
+      background-position: 0 -48px
     }
 
     #slides a:link,
