@@ -1,24 +1,32 @@
 @import 'colors';
 
-#logo-holder{
-  position: fixed; 
-  top: 5px;
-  left: 30px;
+.logo-holder-about{
+  position: relative; 
+  top: 30px;
+  left: 50px;
   z-index: 100;
   width: 240px;
   height: 200px;
   color: $red;
 }
+  
+#image-holder{
+  background-image: url("ibr_about_us_3.jpg");
+  width: 100%;
+  height: 1000px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 
 #about-us {
   padding: 10px;
   padding-top: 5px;
   padding-bottom: 20px;
-  position: fixed;
-  bottom: 50px;
-  right: 225px;
+  position: relative;
+  left: 60%;
   background-color: rgba(24, 40, 40, 0.8);
-  z-index: 100;
+  z-index: 1;
   width: 20%;
 }
 
@@ -31,4 +39,5 @@
 .body-about-us{
   color: white;
   font-size: 0.8em;
+  z-index: 100;
 }
