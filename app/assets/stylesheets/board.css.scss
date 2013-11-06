@@ -1,0 +1,53 @@
+@import 'colors'; 
+#board-background-holder{
+  background-image: url("board_background.jpg");
+  width: 100%;
+  height: 3200px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.board-member{
+  width: 80%;
+  height: 10%;
+  padding: 10px;
+  background-color: rgba(24, 40, 40, 0.6);
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.profile_pic{
+  background-image: url("cogswell.png");
+  height: 160px;
+  background-size: cover;
+  display: inline-block;
+}
+
+.info{
+  margin-top: 10px;
+  display: inline-block;
+}
+.board-members{
+  position: relative;
+  z-index: 1;
+  left: 7%;
+  top: 1%;
+  margin: auto;
+}
+
+.name{
+  color: $red;
+  font-size: 1.1em;
+  padding-bottom: 10px;
+}
+
+.position{
+  color: white;
+  font-size: 0.8em;
+  padding-bottom: 7px;
+}
+
+.bio{
+  color: white;
+  font-size: 0.8em;
+}

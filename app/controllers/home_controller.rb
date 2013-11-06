@@ -6,4 +6,9 @@ class HomeController < ApplicationController
     render :about 
   end 
 
+  def board
+    render :board
+  end
+
+
 end

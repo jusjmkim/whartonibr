@@ -19,7 +19,7 @@
 .top-bar-section li a:not(.button), .menu-left a {
   margin-top: 3px;
   line-height: 18px;
-  padding: 10px 65px;
+  padding: 10px 50px;
   text-align: center;
 }
 
@@ -161,9 +161,11 @@ body, .menu-link, .top-bar {
   margin-bottom: 0px;
   position: fixed;
   bottom: 0px;
-  left: 0px;
   z-index: 500;
   width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin: auto;
 }
 
 .top-bar-section li a:not(.button), .menu-left a{
@@ -173,5 +175,9 @@ body, .menu-link, .top-bar {
 body{
   height: 100%;
   background-color: white;
+}
+
+.left{
+  margin-left: 3px;
 }
 
