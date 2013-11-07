@@ -11,6 +11,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'zurb-foundation'
 gem 'stripe'
+gem 'protected_attributes'
 
 group :production do
   gem 'rails_12factor'
