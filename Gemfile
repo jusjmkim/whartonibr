@@ -12,6 +12,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'zurb-foundation'
 gem 'stripe'
 gem 'protected_attributes'
+gem "paperclip", "~> 3.0"
+gem 'aws-sdk'
 
 group :production do
   gem 'rails_12factor'

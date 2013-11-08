@@ -1,0 +1,10 @@
+<%= form_for @issue do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :volume %>
+  <%= f.number_field :volume %>
+  <%= f.label :pdf %>
+  <%= f.file_field :pdf %>
+  <%= f.submit "Create Issue" %>
+<% end %>
+
