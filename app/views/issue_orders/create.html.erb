@@ -1,0 +1,9 @@
+<% if flash[:error] %>
+  <div class="error">
+    <%= flash[:error] %>
+  </div>
+<% else %>
+  <div class="success">
+    We have successfully processed your order. <%= link_to "Download your PDF", exchange_token_for_pdf_path(@pdf_token) %>.
+  </div>
+<% end %>

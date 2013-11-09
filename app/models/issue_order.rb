@@ -10,6 +10,13 @@
 #
 
 class IssueOrder < ActiveRecord::Base
-  attr_accessible :email, :issue_id
+  attr_accessible :email, :issue_id, :pdf_token
   attr_accessor :stripe_card_token
+  before_save :generate_unique_token
+  belongs_to :issue
+
+  private
+  def generate_unique_token
+    self.pdf_token ||= SecureRandom.hex
+  end
 end

@@ -13,13 +13,25 @@ class IssueOrdersController < ApplicationController
     if charge['paid'] == true
       @issue_order = IssueOrder.new(email: params['issue_order']['email'], issue_id: params['issue_id'])
       if @issue_order.save
-        p 'Successfully logged order.'
+        p @pdf_token
+        @pdf_token = @issue_order.pdf_token
       else 
-        p 'Order went through, but order not logged in the database.'
+        flash[:error] = "Your card was charged, but sadly we were unable to create 
+        a record in the database. Please contact us for your copy of the issue."
       end
     else
       # run checks for errors and return error messages
-      p 'Unable to create charge'
+      flash[:error] = "There was an error in processing your payment."
+    end
+  end
+
+  def exchange_token_for_pdf
+    issue_order = IssueOrder.where(pdf_token: params[:token]).first
+    if issue_order
+      data = open issue_order.issue.pdf.url
+      send_data data.read, filename: issue_order.issue.pdf_file_name, type: "application/pdf", disposition: 'inline', stream: 'true', buffer_size: '4096'
+    else
+      p 'PDF not found'
     end
   end
 end
