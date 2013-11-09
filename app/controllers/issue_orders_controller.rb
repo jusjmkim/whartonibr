@@ -13,8 +13,8 @@ class IssueOrdersController < ApplicationController
     if charge['paid'] == true
       @issue_order = IssueOrder.new(email: params['issue_order']['email'], issue_id: params['issue_id'])
       if @issue_order.save
-        p @pdf_token
         @pdf_token = @issue_order.pdf_token
+        PdfMailer.pdf_email(params['issue_order']['email'], @issue_order).deliver
       else 
         flash[:error] = "Your card was charged, but sadly we were unable to create 
         a record in the database. Please contact us for your copy of the issue."

@@ -1,0 +1,6 @@
+<p>Hello,</p>
+<p>You have successfully purchased a copy of International Business Review Volume <%= @issue_order.issue.volume %>.
+Visit the link below to download the PDF: </p>
+<p><%= root_url + "pdf/#{@issue_order.pdf_token}" %> </p>
+Sincerely,<br><br>
+The International Business Review

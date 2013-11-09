@@ -26,6 +26,8 @@ Ibr::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  
+  # Paperclip for PDF uploads
   Paperclip.options[:command_path] = "/usr/local/bin/"
   config.paperclip_defaults = {
     :storage => :s3,
@@ -37,4 +39,21 @@ Ibr::Application.configure do
   }
   Paperclip::Attachment.default_options[:url] = ':s3_domain_url'
   Paperclip::Attachment.default_options[:path] = '/:class/:attachment/:id_partition/:style/:filename'
+
+  #ActionMailer config 
+  
+  config.action_mailer.perform_deliveries = true 
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :enable_starttls_auto => true,
+      :address              => 'smtp.gmail.com',
+      :port                 => 587,
+      :domain               => 'gmail.com',
+      :user_name            => 'leejhampton@gmail.com',
+      :password             => ENV['EMAIL_PASSWORD'],
+      :authentication       => 'login',
+      :enable_starttls_auto => true
+  }
 end

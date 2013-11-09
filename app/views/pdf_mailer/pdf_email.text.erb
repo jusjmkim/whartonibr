@@ -1,0 +1,11 @@
+Hello,
+
+You have successfully purchased a copy of International Business Review Volume <%= @issue_order.issue.volume %>.
+Visit the link below to download the PDF: 
+
+<%= exchange_token_for_pdf_path(@issue_order.pdf_token) %>
+<%= root_url + "pdf/#{@issue_order.pdf_token}" %>
+
+Sincerely,
+
+The International Business Review
