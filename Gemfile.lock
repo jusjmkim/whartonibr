@@ -33,6 +33,7 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4, < 1.6.0)
       uuidtools (~> 2.1)
+    bcrypt-ruby (3.1.1)
     better_errors (0.9.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -49,6 +50,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    devise (3.0.0)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      warden (~> 1.2.3)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -64,6 +70,9 @@ GEM
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-turbolinks (2.0.1)
+      railties (>= 3.1.0)
+      turbolinks
     jquery-ui-rails (4.0.4)
       jquery-rails
       railties (>= 3.1.0)
@@ -75,6 +84,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.2)
     nokogiri (1.5.10)
+    orm_adapter (0.4.0)
     paperclip (3.5.2)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -152,6 +162,8 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     uuidtools (2.1.4)
+    warden (1.2.3)
+      rack (>= 1.0)
     zurb-foundation (4.3.1)
       sass (>= 3.2.0)
 
@@ -162,9 +174,11 @@ DEPENDENCIES
   annotate
   aws-sdk
   better_errors
+  devise
   factory_girl_rails
   haml
   jquery-rails
+  jquery-turbolinks
   jquery-ui-rails
   paperclip (~> 3.0)
   pg

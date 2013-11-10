@@ -7,6 +7,7 @@ gem 'haml'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'zurb-foundation'
@@ -14,6 +15,7 @@ gem 'stripe'
 gem 'protected_attributes'
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
+gem 'devise'
 
 group :production do
   gem 'rails_12factor'
