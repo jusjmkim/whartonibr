@@ -1,0 +1,10 @@
+$('.errors').empty();
+<% if flash[:error] %>
+  <% flash[:error].each do |error| %>
+    $('.errors').append($('<p>' + '<%= error %>' + '</p>'));
+  <% end %>
+  $('#submit_issue_order').attr('disabled', false);
+<% else %>
+  $('.container').empty();
+  $('.container').append('<div class="success">We have successfully processsed your order. <%= link_to "Download your PDF", exchange_token_for_pdf_path(@pdf_token) %>.</div>');
+<% end %>

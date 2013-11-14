@@ -14,6 +14,7 @@ class IssueOrder < ActiveRecord::Base
   attr_accessor :stripe_card_token
   before_save :generate_unique_token
   belongs_to :issue
+  validates :email, presence: true
 
   private
   def generate_unique_token

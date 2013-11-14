@@ -5,7 +5,7 @@ $(function() {
   issueOrder.setupForm();
 });
 
-issueOrder = {
+var issueOrder = {
   setupForm: function() {
     $('#new_issue_order').submit(function(e) {
       e.preventDefault();
@@ -27,7 +27,18 @@ issueOrder = {
   handleStripeResponse: function(status, response) {
     if (status == 200) {
       $('#issue_order_stripe_card_token').val(response.id);
-      $('#new_issue_order')[0].submit();
+      // $('#new_issue_order')[0].submit();
+      $.ajax({
+        type: "POST",
+        url: $('#new_issue_order').attr('action'),
+        data: { "issue_order": {
+          "stripe_card_token": $('#issue_order_stripe_card_token').val(),
+          "email": $('#issue_order_email').val(),
+          },
+          "issue_id": $('#issue_order_issue_id').val()
+        },
+        dataType: "script"
+      }, issueOrder.processOrder);
     }
     else {
       $('#stripe_error').text(response.error.message);
@@ -35,4 +46,3 @@ issueOrder = {
     }
   }
 }
-

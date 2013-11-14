@@ -15,13 +15,13 @@
 
   	<title><%= content_for?(:title) ? yield(:title) : "International Business Review" %></title>
   	
-    <%= csrf_meta_tags %>
-    <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
     <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Montserrat:400,700' %>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "https://js.stripe.com/v1/" %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+    <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
   </head>
 
   <body>

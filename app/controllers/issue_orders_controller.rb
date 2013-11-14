@@ -16,12 +16,21 @@ class IssueOrdersController < ApplicationController
         @pdf_token = @issue_order.pdf_token
         PdfMailer.pdf_email(params['issue_order']['email'], @issue_order).deliver
       else 
-        flash[:error] = "Your card was charged, but sadly we were unable to create 
-        a record in the database. Please contact us for your copy of the issue."
+        flash[:error] = []
+        @issue_order.errors.full_messages.each do |error_message|
+          flash[:error].push(error_message)
+        end
+        respond_to do |format|
+          format.js
+        end
       end
     else
-      # run checks for errors and return error messages
-      flash[:error] = "There was an error in processing your payment."
+      # run checks for errors and return error message
+      flash[:error] = []
+      flash[:error].push(charge['failure_message'])
+      respond_to do |format|
+        format.js
+      end
     end
   end
 
