@@ -14,5 +14,6 @@
 #
 class Issue < ActiveRecord::Base
   attr_accessible :name, :pdf, :issue_img, :title
+  has_many :highlights
   has_attached_file :pdf
 end
