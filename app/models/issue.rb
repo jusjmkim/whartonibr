@@ -13,6 +13,6 @@
 #  pdf_updated_at   :datetime
 #
 class Issue < ActiveRecord::Base
-  attr_accessible :name, :pdf, :issue_img
+  attr_accessible :name, :pdf, :issue_img, :title
   has_attached_file :pdf
 end

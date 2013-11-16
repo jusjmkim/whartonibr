@@ -2,6 +2,12 @@
 
 #issues.index {
   background-image: url('background.jpg');
+  
+  .logo {
+    height: 200px;
+    width: 240px;
+    margin: 15px 0 0 90px;
+  }
 
   .issue-container {
     width: 31.7%;
@@ -18,11 +24,58 @@
   .issue-name {
     display: block;
     text-align: center;
-    font-size: 16px;
+    font-size: 1.5em;
+    font-weight: bold;
   }
 
   .reveal-modal {
-    background-color: $dark-grey;
+    background-color: rgba($dark-grey, .9);
     color: white;
+  }
+
+  .reveal-modal .issue-container-modal {
+    margin: 0;
+    padding-top: 20px;
+  }
+
+  .close-reveal-modal {
+    color: white;
+    font-size: 1.5em;
+  }
+
+  .issue-preview-and-purchase {
+    text-align: center;
+  }
+
+  .purchase-issue-link {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: white;
+    &:hover {
+      border-color: red;
+      color: $red;
+    }
+  }
+
+  .issue-title-modal,
+  .issue-name-modal {
+    display: block;
+    text-align: left;
+  }
+
+  .issue-title-modal {
+    color: $red;
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+
+  .issue-name-modal {
+    font-size: 1.25em;
+    font-weight: bold;
   }
 }

@@ -1,3 +1,5 @@
+<div class="container">
+<img src="<%= image_path "IBR_logo.png" %>" class="logo">
 <div class="row">
   <% @issues.each_with_index do |issue, index| %>
     <a href="#" data-reveal-id="issue-<%= issue.id %>-modal">
@@ -11,6 +13,7 @@
     <% end %>
   <% end %>
 </div>
+</div>
 
 <br>
 <br>
@@ -19,14 +22,14 @@
 <% @issues.each do |issue| %>
   <div id="issue-<%= issue.id %>-modal" class="reveal-modal">
     <a href="#" class="close-reveal-modal">x</a>
-    <div class="row">
-      <div class="large-2 columns">
-        <img src="<%= image_path issue.issue_img %>">
-        <a href="<%= new_issue_issue_order_path(issue_id: issue.id) %>" class="issue-purchase">Purchase this Issue</a>
+    <div class="row issue-container-modal">
+      <div class="large-3 columns issue-preview-and-purchase">
+        <img src="<%= image_path issue.issue_img %>" class="issue-image-modal">
+        <a href="<%= new_issue_issue_order_path(issue_id: issue.id) %>" class="purchase-issue-link">Purchase this Issue</a>
       </div>
-      <div class="large-8 columns">
-        <span class="issue-title"><%= issue.title %></span>
-        <span class="issue-name">International Business Review <%= issue.name %></span>
+      <div class="large-9 columns">
+        <span class="issue-title-modal"><%= issue.title %></span>
+        <span class="issue-name-modal"><em>International Business Review <%= issue.name %></em></span>
       </div>
     </div>
   </div>
