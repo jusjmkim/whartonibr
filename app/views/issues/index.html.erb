@@ -30,6 +30,11 @@
       <div class="large-9 columns">
         <span class="issue-title-modal"><%= issue.title %></span>
         <span class="issue-name-modal"><em>International Business Review <%= issue.name %></em></span>
+        <p class="highlights-header">Highlights</p>
+        <% issue.highlights.each do |highlight| %>
+            <span class="highlight-title"><%= highlight.title %></span>
+            <p class="highlight-description"><%= highlight.description %></p>
+        <% end %>
       </div>
     </div>
   </div>
