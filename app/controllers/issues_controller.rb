@@ -1,6 +1,6 @@
 class IssuesController < ApplicationController
   def index
-    @issues = Issue.all
+    @issues = Issue.all.order('created_at ASC')
   end
 
   def new
@@ -12,7 +12,7 @@ class IssuesController < ApplicationController
   end
 
   def edit_all
-    @issues = Issue.all
+    @issues = Issue.all.order('created_at ASC')
   end
 
   def update
