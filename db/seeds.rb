@@ -14,6 +14,7 @@ issue_1 = Issue.create(name: "Spring 2010", title: "The Future of Financial Regu
 issue_2 = Issue.create(name: "Spring 2012", title: "The Changing Face of the World", issue_img: "Spring 2012.jpg")
 issue_3 = Issue.create(name: "Winter 2012", title: "Technology: What's Next?", issue_img: "Winter 2012.jpg")
 issue_4 = Issue.create(name: "Spring 2013", title: "The Debt Nexus", issue_img: "Spring 2013.jpg")
+issue_5 = Issue.create(name: "Fall 2013", title: "Luxury", issue_img: "Spring 2013.jpg")
 
 highlight_1 = Highlight.create(issue_id: issue_1.id, 
                               title: "Interview with Oswald Gruebel, CEO, UBS Group Interviewed by Daniel Hellwig (W’11)
@@ -64,3 +65,14 @@ highlight_8 = Highlight.create(issue_id: issue_4.id,
                               title: "Arianna Huffington: The Founder, Chair, President, and Editor-in-Chief of the Huffington Post",
                               description: "Arianna Huffington: “Our biggest…problem right now isn’t government spending or the long-term deficit 
                               horizon. It’s jobs. And…the best solution for the deficit is growth.”")
+
+highlight_9 = Highlight.create(issue_id: issue_5.id,
+                              title: "The Psychology of Top Shelf Purchases",
+                              description: "Rational humans often weigh the pros and cons of decisions, and this is the basis of classical economics: 
+                              price increases lead to lower demand. However, this “rule” changes with luxury goods. Products that 
+                              seem to be of a higher price or quality make us think and react uncharacteristically.")
+
+highlight_10 = Highlight.create(issue_id: issue_5.id, 
+                               title: "The Business of Luxury Comfort: A Look into the Four Seasons Formula for Success Interviewed by Lauren Zakarian-Cogswell (W’15)",
+                               description: "Robin Brown: “…It’s in bringing out…the incredible gift to deliver a level of intuitive service that does 
+                               not exist with just any hotel or other service environment, period.”")
