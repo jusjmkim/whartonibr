@@ -1,4 +1,7 @@
 <div class="container">
+<% if 100 == 100 %>
+    Coming soon.
+<% else %>
   <%= form_for([@issue, @issue_order]) do |f| %>
     <% if @issue_order.errors.any? %>
       <div class="error_messages">
@@ -33,4 +36,5 @@
     <div class="actions"><%= f.submit "Purchase Issue", id: "submit_issue_order" %></div>
   <% end %>
   <div class="errors"></div>
+<% end %>
 </div>
