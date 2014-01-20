@@ -78,4 +78,16 @@
     font-size: 1.25em;
     font-weight: bold;
   }
+
+  .highlights-header {
+    margin: 8px 0;
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+  .highlight-title {
+    display: block;
+    margin-bottom: 0px;
+    color: $red;
+    font-weight: bold;
+  }
 }

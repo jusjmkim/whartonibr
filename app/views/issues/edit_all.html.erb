@@ -1,4 +1,5 @@
 <% @issues.each do |issue| %>
+  <p><%= issue.name %></p>
   <%= form_for issue, method: :patch do |f| %>
     <%= f.label :pdf %> <br />
     <%= f.file_field :pdf %>
