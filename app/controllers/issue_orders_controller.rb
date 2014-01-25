@@ -6,7 +6,7 @@ class IssueOrdersController < ApplicationController
 
   def create
     charge = Stripe::Charge.create(
-      :amount => 400,
+      :amount => 50,
       :currency => "usd",
       :card => params['issue_order']['stripe_card_token']
     )
