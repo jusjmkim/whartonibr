@@ -3,11 +3,17 @@
 #issues.index {
   background-image: url('background.jpg');
   
-  .logo {
-    height: 200px;
-    width: 240px;
-    margin: 15px 0 0 90px;
+.logo {
+  position: relative; 
+  top: 20px;
+  z-index: 100;
+  width: 20%;
+  margin-bottom: 50px;
+  color: $red;
+
   }
+
+
 
   .issue-container {
     width: 31.7%;
