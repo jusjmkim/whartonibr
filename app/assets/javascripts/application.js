@@ -30,7 +30,7 @@ $(function(){
         play: {
           active: true,
           effect: 'fade',
-          interval: 2000,
+          interval: 4000,
           auto: true,
           swap: true
         },
