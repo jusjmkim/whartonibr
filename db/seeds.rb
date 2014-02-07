@@ -10,11 +10,38 @@
 Issue.delete_all
 Highlight.delete_all
 
+issue_0 = Issue.create(name: "Fall 2009", title: "History of Our Financial Crises", issue_img: "Fall 2009.jpg")
+issue_01 = Issue.create(name: "Fall 2010", title: "Debt Crisis in Europe", issue_img: "Fall 2010.jpg")
 issue_1 = Issue.create(name: "Spring 2010", title: "The Future of Financial Regulation", issue_img: "Spring 2010.jpg")
 issue_2 = Issue.create(name: "Spring 2012", title: "The Changing Face of the World", issue_img: "Spring 2012.jpg")
 issue_3 = Issue.create(name: "Winter 2012", title: "Technology: What's Next?", issue_img: "Winter 2012.jpg")
 issue_4 = Issue.create(name: "Spring 2013", title: "The Debt Nexus", issue_img: "Spring 2013.jpg")
 issue_5 = Issue.create(name: "Fall 2013", title: "Luxury", issue_img: "Spring 2013.jpg")
+
+highlight_0 = Highlight.create(issue_id: issue_0.id,
+                              title: "Interview with Jeremy Siegel, Professor of Finance, Wharton School Interviewed by
+                              Maxwell Black (W’10) and Daniel Hellwig (W’11)",
+                              description: "“My proposal is that if you are ‘too big to fail,’ you are required to have more equity cushion. You must 
+                              have more preferred stock”…“The demand for financial services is as strong as ever. The only financial 
+                                service that will not be demanded is the subprime mortgage business.”")
+
+highlight_00 = Highlight.create(issue_id: issue_0.id,
+                               title: "GCC’s Monetary Union: Then There Were Four",
+                               description: "An agreement among rulers of six Arabian Gulf nations to form a Gulf Corporation Council common 
+                               market would establish a single GCC currency by 2010. However, the odds of meeting this deadline were 
+                                slim. This article focuses on the truth behind the inevitable question: Why the setback?")
+
+highlight_01 = Highlight.create(issue_id: issue_01.id,
+                               title: "Interview with Dr. Joseph Ackermann, CEO, Deutsche Bank Interviewed by Daniel Hellwig (W’11)",
+                               description: "“The most important fact is that the [Greek] rescue package has bought three years of time…If the
+                               quick set-up of the EFSF can serve as a precedent for a new pragmatic approach to economic policy
+                                coordination in Europe, I am confident that the challenges ahead will be mastered to Europe’s advantage”")
+
+highlight_001 = Highlight.create(issue_id: issue_01.id,
+                                title: "European Debt Crisis: Back from the Brink… for Now",
+                                description: "As 2009 ended, the global economy was no longer close to collapse. Recovery had begun in many 
+                                countries, but effects of events in Greece still threaten to destabilize the economy. This article explores 
+                                the causes and consequences of this phenomenon, which are crucial to economic recovery.")
 
 highlight_1 = Highlight.create(issue_id: issue_1.id, 
                               title: "Interview with Oswald Gruebel, CEO, UBS Group Interviewed by Daniel Hellwig (W’11)
