@@ -30,13 +30,13 @@ $(function(){
         play: {
           active: true,
           effect: 'fade',
-          interval: 4000,
+          interval: 5000,
           auto: true,
           swap: true
         },
         effect: {
           fade: {
-            speed: 3000
+            speed: 5000
           }
         }
       });
