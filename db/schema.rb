@@ -19,11 +19,7 @@ ActiveRecord::Schema.define(version: 20131116060658) do
   create_table "highlights", force: true do |t|
     t.integer  "issue_id"
     t.string   "title"
-<<<<<<< HEAD
     t.string   "description"
-=======
-    t.text     "description"
->>>>>>> 3651cb6c549018feff17b2b125c781905938635c
     t.datetime "created_at"
     t.datetime "updated_at"
   end
