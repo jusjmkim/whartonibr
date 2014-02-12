@@ -16,7 +16,7 @@ issue_1 = Issue.create(name: "Spring 2010", title: "The Future of Financial Regu
 issue_2 = Issue.create(name: "Spring 2012", title: "The Changing Face of the World", issue_img: "Spring 2012.jpg")
 issue_3 = Issue.create(name: "Winter 2012", title: "Technology: What's Next?", issue_img: "Winter 2012.jpg")
 issue_4 = Issue.create(name: "Spring 2013", title: "The Debt Nexus", issue_img: "Spring 2013.jpg")
-issue_5 = Issue.create(name: "Fall 2013", title: "Luxury", issue_img: "Spring 2013.jpg")
+issue_5 = Issue.create(name: "Autumn / Winter 2013", title: "Luxury", issue_img: "Fall 2013.jpg")
 
 highlight_0 = Highlight.create(issue_id: issue_0.id,
                               title: "Interview with Jeremy Siegel, Professor of Finance, Wharton School Interviewed by
