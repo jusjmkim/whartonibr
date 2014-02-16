@@ -1,5 +1,27 @@
 @import 'colors';
 
+.title {
+    color: $red;
+    font-size: 2em;
+    margin: auto;
+}
 .errors {
   color: $red;
+}
+
+#issue_orders {
+    body {
+        background-color: #182828;
+        color: white;
+    }
+    .new_issue_order {
+        margin: auto;
+        text-align: center;
+    }
+    .text-center {
+      -webkit-font-smoothing: antialiased;
+      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #232525;
+
+    }
 }

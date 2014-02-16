@@ -1,7 +1,11 @@
+<h1 class="text-center title">Purcahse Issue Form</h1>
+
 <div class="container_purchase">
 <% if 100 == 1001 %>
     Coming soon.
 <% else %>
+  <div class="row">
+  <div class="six columns text-center">
   <%= form_for([@issue, @issue_order]) do |f| %>
     <% if @issue_order.errors.any? %>
       <div class="error_messages">
@@ -35,6 +39,8 @@
     <div id="stripe_error"></div>
     <div class="actions"><%= f.submit "Purchase Issue", id: "submit_issue_order" %></div>
   <% end %>
+  </div>
+  </div>
   <div class="errors"></div>
 <% end %>
 </div>
