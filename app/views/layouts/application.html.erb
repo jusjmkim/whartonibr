@@ -25,23 +25,12 @@
   </head>
 
   <body>
-    <div class="sticky">
-      <nav class="top-bar">
-        <section class="top-bar-section">
-          <ul class="left">
-            <li class="menu-left"><a class="menu-link" href= <%= root_path %> >Home</a></li>
-            <li class="menu-left"><a class="menu-link" href= <%= about_path %> >About Us</a></li>
-            <li class="menu-left"><a class="menu-link" href= <%= board_path %> >Executive Board</a></li>
-            <li class="menu-left"><a class="menu-link" href="<%= issues_path %>">Past Issues</a></li>
-          </ul>
-
-        </section>  
-      </nav>
-    </div>
 
     <div id='<%= "#{params[:controller].parameterize}" %>' class='<%= "#{params[:action]}" %>'>
       <%= yield %>
     </div>
+
+    <%= render nav_bar %>
 
   </body>
 </html>
