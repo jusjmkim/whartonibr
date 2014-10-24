@@ -24,6 +24,7 @@ group :development, :test do
   gem 'annotate'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'pry'
 end
 
 group :development do
