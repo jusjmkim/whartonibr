@@ -1,7 +1,7 @@
 Ibr::Application.routes.draw do
+  root 'home#index'
   devise_for :admins
   devise_for :users, :controllers => {sessions: 'sessions', registrations: 'registrations'}
-  root 'home#index'
   match 'about', to: 'home#about', via: :get, as: 'about'
   match 'board', to: 'home#board', via: :get, as: 'board'
   match 'edit_all_issues', to: 'issues#edit_all', via: :get, as: 'edit_all_issues'
@@ -9,4 +9,6 @@ Ibr::Application.routes.draw do
   resources :issues do
     resources :issue_orders, only: [:new, :index, :create]
   end
+
+  match "*missing" => redirect("/"), via: :get
 end
