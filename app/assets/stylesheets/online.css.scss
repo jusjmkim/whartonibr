@@ -1,0 +1,33 @@
+@import 'colors';
+
+#image-holder-login{
+  background-image: url('huntsman.jpg');
+  width: 100%;
+  height: 10000px;
+  bacground-size: cover;
+  background-attachment: fixed;
+}
+
+#login{
+  background: rgba(50, 50, 50, 0.7);
+  margin: auto auto;
+}
+
+#login-header{
+  font-size: 70px;
+  width: 220px;
+  margin: 0 auto;
+  color: #B80700;
+}
+
+label {
+  color: #B80700;
+}
+
+#admin_email{
+  width: 300px;
+}
+
+#admin_password{
+  width: 300px;
+}

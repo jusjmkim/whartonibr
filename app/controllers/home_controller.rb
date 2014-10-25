@@ -10,5 +10,9 @@ class HomeController < ApplicationController
     render :board
   end
 
+  def online
+    @admin = Admin.new
+    render :online
+  end
 
 end
