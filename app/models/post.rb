@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  attr_accessible :title, :author, :story_type, :body
 
   def self.stories
     Post.find_posts('story')
@@ -14,7 +15,7 @@ class Post < ActiveRecord::Base
 
   private
     def self.find_posts (type)
-      Post.find_by(type: type).all
+      Post.where(story_type: type)
     end
 
 end

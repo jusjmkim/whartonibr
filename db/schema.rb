@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20141026060714) do
     t.string   "title"
     t.string   "author"
     t.string   "body"
-    t.string   "type"
+    t.string   "story_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

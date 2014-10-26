@@ -17,4 +17,9 @@ class HomeController < ApplicationController
     render :online
   end
 
+  private
+    def post_params
+      params.require(:post).permit(:title, :author, :body, :type)
+    end
+
 end

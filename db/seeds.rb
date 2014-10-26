@@ -103,3 +103,28 @@ highlight_10 = Highlight.create(issue_id: issue_5.id,
                                title: "The Business of Luxury Comfort: A Look into the Four Seasons Formula for Success Interviewed by Lauren Zakarian-Cogswell (W’15)",
                                description: "Robin Brown: “…It’s in bringing out…the incredible gift to deliver a level of intuitive service that does 
                                not exist with just any hotel or other service environment, period.”")
+
+post_1 = Post.create(title: 'story_1',
+                    body: 'amazing story 1',
+                    story_type: 'story',
+                    author: 'user_1')
+post_2 = Post.create(title: 'story_2',
+                    body: 'amazing story 2',
+                    story_type: 'story',
+                    author: 'user_2')
+post_3 = Post.create(title: 'feature_1',
+                    body: 'amazing feature 1',
+                    story_type: 'feature',
+                    author: 'user_3')
+post_4 = Post.create(title: 'feature_2',
+                    body: 'amazing feature 2',
+                    story_type: 'feature',
+                    author: 'user_4')
+post_5 = Post.create(title: 'editor_notes_1',
+                    body: 'amazing editor_notes 1',
+                    story_type: 'editor_notes',
+                    author: 'user_5')
+post_6 = Post.create(title: 'editor_notes_2',
+                    body: 'amazing editor_notes 2',
+                    story_type: 'editor_notes',
+                    author: 'user_6')
