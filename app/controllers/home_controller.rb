@@ -11,7 +11,9 @@ class HomeController < ApplicationController
   end
 
   def online
-    @admin = Admin.new
+    @stories = Post.stories
+    @features = Post.features
+    @editor_notes = Post.editor_notes
     render :online
   end
 
