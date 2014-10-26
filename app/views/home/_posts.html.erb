@@ -1,0 +1,10 @@
+<% posts.each do |post| %>
+  <div>
+    <p class='title'><%= post.title %></p>
+    <p class='body'><%= post.body %></p>
+    <% if admin_signed_in? %>
+      <%= link_to post %>
+    <% end %>
+  </div>
+  <br>
+<% end %>
