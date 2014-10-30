@@ -2,9 +2,9 @@
   <div>
     <p class='title'><%= post.title %></p>
     <p class='body'><%= post.body %></p>
-    <% if admin_signed_in? %>
-      <%= link_to post %>
-    <% end %>
+    <%# if admin_signed_in? %>
+      <%= link_to 'Show', post %>
+    <%# end %>
   </div>
   <br>
 <% end %>
