@@ -2,10 +2,7 @@
   <div>
     <a href="<%= post_path(post) %>"><p class='title'><%= post.title %></p></a>
     <p class='body'><%= post.body %></p>
-    <%# if admin_signed_in? %>
-      <%= link_to 'Edit', edit_post_path(post) %>
-      <%= link_to 'Delete', post, method: :delete %>
-    <%# end %>
+    <%= render 'posts/edit_delete', post: post %>
   </div>
   <br>
 <% end %>

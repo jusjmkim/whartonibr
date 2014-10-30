@@ -1,5 +1,8 @@
-<% if admin_signed_in? %>
-  <%= link_to 'LOG OUT', '/admins/sign_out' %>
-<% else %>
-  <%= link_to 'LOGIN',  '/admins/sign_in', id: 'login-link' %>
-<% end %>
+<%# if admin_signed_in? %>
+  <%= link_to 'LOG OUT', '/admins/sign_out', class: 'blog-bar' %>
+  <%# if admin_signed_in? %>
+    <%= link_to 'New Post', new_post_path, class: 'blog-bar' %>
+  <%# end %>
+<%# else %>
+  <%#= link_to 'LOGIN',  '/admins/sign_in', class: 'blog-bar' %>
+<%# end %>

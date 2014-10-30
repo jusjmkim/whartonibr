@@ -13,6 +13,10 @@ class Post < ActiveRecord::Base
     Post.find_posts('editor_notes')
   end
 
+  def self.story_types
+    ['story', 'feature', 'editor notes']
+  end
+
   private
     def self.find_posts (type)
       Post.where(story_type: type)

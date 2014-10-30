@@ -1,0 +1,28 @@
+@import 'colors';
+
+#back-btn{
+  color: $red;
+  font-size: 2em;
+  margin-left: 10px;
+}
+
+#new-post-title{
+  width: 20%;
+  margin: 0 auto;
+  color: $red;
+  font-size: 5em;
+}
+
+#new_post{
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+
+#post_body{
+  height: 200px;
+}
+
+#post_story_type{
+  font-size: 2em;
+}
