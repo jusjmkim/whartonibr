@@ -11,7 +11,7 @@ Ibr::Application.routes.draw do
     resources :issue_orders, only: [:new, :index, :create]
   end
 
-  resources :post
+  resources :posts
 
   get '/admins/sign_up', to: redirect('/')
   match "*missing" => redirect("/"), via: :get
