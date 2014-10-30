@@ -1,21 +1,22 @@
 <div id='image-holder-online'>
-  <div id='logo-holder'><img src="/assets/IBR_logo.png"></div>
+  <div id='dark-gray-layer'>
+    <div id='logo-holder'><img src="/assets/IBR_logo.png"></div>
 
-  <%= render 'home/admin_login' %>
+    <%= render 'home/admin_login' %>
 
-  <div id='stories'>
-    <h2>STORIES</h2>
-    <%= render 'home/posts', posts: @stories %>
+    <div class='column' id='stories'>
+      <h2>STORIES</h2>
+      <%= render 'home/posts', posts: @stories %>
+    </div>
+
+    <div class='column' id='features'>
+      <h2>FEATURES</h2>
+      <%= render 'home/posts', posts: @features %>
+    </div>
+
+    <div class='column' id='editor-notes'>
+      <h2>EDITOR'S NOTES</h2>
+      <%= render 'home/posts', posts: @editor_notes %>
+    </div>
   </div>
-
-  <div id='features'>
-    <h2>FEATURES</h2>
-    <%= render 'home/posts', posts: @features %>
-  </div>
-
-  <div id='editor-notes'>
-    <h2>EDITOR'S NOTES</h2>
-    <%= render 'home/posts', posts: @editor_notes %>
-  </div>
-
 </div>

@@ -5,13 +5,13 @@
     <h2 id='login-header'>LOGIN</h2>
 
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-      <div><%= f.label :username %><br />
+      <div class='form-input'><%= f.label :username, 'USERNAME: ' %>
       <%= f.text_field :username, :autofocus => true %></div>
 
-      <div><%= f.label :password %><br />
+      <div class='form-input'><%= f.label :password, 'PASSWORD:' %>
       <%= f.password_field :password %></div>
-
-      <div><%= f.submit "Sign in" %></div>
+      <br>
+      <div class='btn btn-primary' id='submit'><%= f.submit "Sign in", id: 'submit-btn' %></div>
     <% end %>
   </div>
 </div>

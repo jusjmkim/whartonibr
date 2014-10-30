@@ -1,5 +1,5 @@
 <% if admin_signed_in? %>
-  
+  <%= link_to 'LOG OUT', '/admins/sign_out' %>
 <% else %>
-  <%= link_to @sign_up, 'LOGIN' %>
+  <div><%= link_to 'LOGIN',  '/admins/sign_in', id: 'login-link' %></div>
 <% end %>
