@@ -17,6 +17,10 @@ class Post < ActiveRecord::Base
     ['story', 'feature', 'editor notes']
   end
 
+  def self.find_post(params)
+    Post.find(params['id'])
+  end
+
   private
     def self.find_posts (type)
       Post.where(story_type: type)

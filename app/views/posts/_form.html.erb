@@ -28,11 +28,12 @@
 
   <div class='field'>
     <%= f.label :story_type %><br>
-    <select name='post[story_type]' id='post_story_type'>
-      <% Post.story_types.each do |story_type| %>
-        <option value='<%= story_type %>'><%= story_type %></option>
-      <% end %>
-    </select>
+<!--     <select name='post[story_type]' id='post_story_type'>
+      <%# Post.story_types.each do |story_type| %>
+        <option value='<%#= story_type %>'><%#= story_type %></option>
+      <%# end %>
+    </select> -->
+    <%= f.select :story_type, Post.story_types, include_blank: true, allow_blank: false %>
   </div>
 
   <div class="actions">
