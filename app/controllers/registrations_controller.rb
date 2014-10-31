@@ -17,4 +17,5 @@ class RegistrationsController < Devise::RegistrationsController
   def render_user_form(resource, success)
     render :json => {:success => true, :log_out_path => destroy_user_session_path, :user_email => resource.email}
   end
+
 end

@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
   after_filter :add_flash_to_header
 
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
   def add_flash_to_header
     p flash[:error]
     response.headers['X-Flash-Error'] = flash[:error] unless flash[:error].blank? || flash[:error].nil?
@@ -13,4 +15,19 @@ class ApplicationController < ActionController::Base
     # make sure flash does not appear on the next page
     flash.discard
   end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_in) {|u| u.permit(:username, :encrypted_password)}
+  end
+
+  def after_sign_in_path_for(resource)
+    online_path
+  end
+
+  def after_sign_out_path_for(resource)
+    online_path
+  end
+  
 end

@@ -128,3 +128,4 @@ post_6 = Post.create(title: 'editor_notes_2',
                     body: 'amazing editor_notes 2',
                     story_type: 'editor_notes',
                     author: 'user_6')
+admin = Admin.create(username: 'admin', password: 'password', password_confirmation: 'password', confirmed_at: Time.now, email: 'admin@admin.com')
