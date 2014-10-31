@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class PostController < ApplicationController
 
   def new
     @post = Post.new
@@ -27,6 +27,8 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post = Post.find_post(params)
+
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -39,6 +41,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find_post(params)
+
     @post.destroy
     respond_to do |format|
       format.html { redirect_to '/online' }

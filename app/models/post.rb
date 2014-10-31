@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   attr_accessible :title, :author, :story_type, :body
+  validates :title, :author, :body, :story_type, presence: true
 
   def self.stories
     Post.find_posts('story')
