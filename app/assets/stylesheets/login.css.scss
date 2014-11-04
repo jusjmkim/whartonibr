@@ -15,8 +15,15 @@
   padding: 10px;
 }
 
+#new_admin{
+  width: 80%;
+  margin: 0 auto;
+}
+
 #login-header{
-  font-size: 5em;
+  font-size: 4em;
+  font-family: gotham;
+  font-weight: bold;
   width: 220px;
   margin: 0 auto;
   color: $red;
@@ -59,6 +66,6 @@ label {
 }
 
 .form-input{
-  width: 32em;
+  width: 100%;
   margin: 0 auto;
 }

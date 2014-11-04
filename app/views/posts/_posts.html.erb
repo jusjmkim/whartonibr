@@ -1,5 +1,5 @@
 <% posts.each do |post| %>
-  <div>
+  <div class='column-body'>
     <a href="<%= post_path(post) %>"><p class='title'><%= post.title %></p></a>
     <p class='body'><%= post.preview %></p>
     <%= render 'posts/edit_delete', post: post %>
