@@ -1,5 +1,11 @@
 class PostsController < ApplicationController
 
+  def index
+    @stories = Post.stories
+    @features = Post.features
+    @editor_notes = Post.editor_notes
+  end
+
   def new
     @post = Post.new
   end
@@ -45,7 +51,7 @@ class PostsController < ApplicationController
 
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to '/online' }
+      format.html { redirect_to posts_path }
       format.json { head :no_content }
     end
   end

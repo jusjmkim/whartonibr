@@ -28,7 +28,7 @@ class Post < ActiveRecord::Base
 
   private
     def self.find_posts(type)
-      Post.where(story_type: type)
+      Post.where(story_type: type) || []
     end
 
     def add_ellipsis(text)

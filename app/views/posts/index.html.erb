@@ -1,4 +1,4 @@
-<div id='image-holder-online'>
+<div id='image-holder-post-index'>
   <div id='dark-gray-layer'>
     <div id='blog-header'>
       <img id='blog-logo' src="/assets/IBR_logo.png">
@@ -7,17 +7,17 @@
 
     <div class='column' id='stories'>
       <h2 class='column-title content'>STORIES</h2>
-      <%= render 'home/posts', posts: @stories %>
+      <%= render 'posts/posts', posts: @stories %>
     </div>
 
     <div class='column' id='features'>
       <h2 class='column-title content'>FEATURES</h2>
-      <%= render 'home/posts', posts: @features %>
+      <%= render 'posts/posts', posts: @features %>
     </div>
 
     <div class='column' id='editor-notes'>
       <h2 class='column-title content'>EDITOR'S NOTES</h2>
-      <%= render 'home/posts', posts: @editor_notes %>
+      <%= render 'posts/posts', posts: @editor_notes %>
     </div>
   </div>
 </div>
