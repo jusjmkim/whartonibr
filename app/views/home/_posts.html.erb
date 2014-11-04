@@ -1,8 +1,10 @@
-<% posts.each do |post| %>
-  <div>
-    <a href="<%= post_path(post) %>"><p class='title'><%= post.title %></p></a>
-    <p class='body'><%= post.preview %></p>
-    <%= render 'posts/edit_delete', post: post %>
-  </div>
-  <br>
+<% if posts %>
+  <% posts.each do |post| %>
+    <div>
+      <a href="<%= post_path(post) %>"><p class='title'><%= post.title %></p></a>
+      <p class='body'><%= post.preview %></p>
+      <%= render 'posts/edit_delete', post: post %>
+    </div>
+    <br>
+  <% end %>
 <% end %>
