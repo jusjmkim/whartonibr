@@ -7,17 +7,17 @@
 
     <div class='column' id='stories'>
       <h2 class='column-title content'>STORIES</h2>
-      <%= render 'posts/posts', posts: @stories unless @stories.empty? %>
+      <%= render 'posts/posts', posts: @stories %>
     </div>
 
     <div class='column' id='features'>
       <h2 class='column-title content'>FEATURES</h2>
-      <%= render 'posts/posts', posts: @features unless @features.empty? %>
+      <%= render 'posts/posts', posts: @features %>
     </div>
 
     <div class='column' id='editor-notes'>
       <h2 class='column-title content'>EDITOR'S NOTES</h2>
-      <%= render 'posts/posts', posts: @editor_notes unless @editor_notes.empty? %>
+      <%= render 'posts/posts', posts: @editor_notes %>
     </div>
   </div>
 </div>
