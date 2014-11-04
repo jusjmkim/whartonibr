@@ -28,6 +28,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'thin'
   gem 'binding_of_caller'
+  gem 'figaro'
 end
 
 group :development do
