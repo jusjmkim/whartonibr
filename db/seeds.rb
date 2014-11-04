@@ -122,10 +122,10 @@ post_4 = Post.create(title: 'feature_2',
                     author: 'user_4')
 post_5 = Post.create(title: 'editor_notes_1',
                     body: 'amazing editor_notes 1',
-                    story_type: 'editor_notes',
+                    story_type: 'editor notes',
                     author: 'user_5')
 post_6 = Post.create(title: 'editor_notes_2',
                     body: 'amazing editor_notes 2',
-                    story_type: 'editor_notes',
+                    story_type: 'editor notes',
                     author: 'user_6')
 admin = Admin.create(username: 'admin', password: 'password', password_confirmation: 'password', confirmed_at: Time.now, email: 'admin@admin.com')

@@ -11,7 +11,7 @@ class Post < ActiveRecord::Base
   end
 
   def self.editor_notes
-    Post.find_posts('editor_notes')
+    Post.find_posts('editor notes')
   end
 
   def self.story_types
