@@ -22,9 +22,18 @@ class Post < ActiveRecord::Base
     Post.find(params['id'])
   end
 
+  def preview
+    add_ellipsis(self.body.split(' ')[0..50].join(' '))
+  end
+
   private
-    def self.find_posts (type)
+    def self.find_posts(type)
       Post.where(story_type: type)
+    end
+
+    def add_ellipsis(text)
+      return text if text.size <= 50
+      text + ' ...'
     end
 
 end
