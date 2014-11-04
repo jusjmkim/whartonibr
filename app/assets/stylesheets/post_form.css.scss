@@ -1,11 +1,5 @@
 @import 'colors';
 
-#back-btn{
-  color: $red;
-  font-size: 2em;
-  margin-left: 10px;
-}
-
 #post-form-title{
   width: 20%;
   margin: 0 auto;
@@ -34,9 +28,9 @@
 }
 
 #error_explanation {
-    background-color: #f2dede;
-    border-color: #eed3d7;
-    color: #b94a48;
-    text-align: left;
-    padding-left: 5%;
- }
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+  padding-left: 5%;
+}
