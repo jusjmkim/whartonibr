@@ -14,6 +14,7 @@ gem 'protected_attributes'
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
 gem 'devise'
+gem 'thin'
 
 group :production do
   gem 'rails_12factor'
@@ -26,7 +27,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry'
   gem 'sqlite3'
-  gem 'thin'
   gem 'binding_of_caller'
   gem 'figaro'
 end
