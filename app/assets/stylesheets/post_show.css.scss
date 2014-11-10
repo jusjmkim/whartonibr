@@ -29,3 +29,21 @@
 #post-body{
   color: white;
 }
+
+/* modal styling */
+.modal-dialog{
+  width: 80%;
+}
+
+#black-layer-modal{
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  padding: 10%; 
+}
+
+#post-title-modal{
+  color: $red;
+  font-size: 5em;
+  width: 40%;
+  margin: 0 auto;
+}
