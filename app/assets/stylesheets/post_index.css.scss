@@ -2,7 +2,7 @@
 
 .column{
   width: 30%;
-  margin: 12% 10%;
+  margin: 15% 10% 12%;
 }
 
 .blog-bar{
@@ -24,7 +24,6 @@
 
 #blog-logo{
   width: 240px;
-  margin-bottom: 10px;
 }
 
 #new-post{
@@ -51,6 +50,7 @@ div.column-title{
   color: $red;
   font-weight: bold;
   font-family: gotham;
+  font-size: 2em;
 }
 
 .body{

@@ -1,26 +1,21 @@
-<div id='image-holder-post-index'>
-  <div id='black-layer'>
-    <div id='blog-header'>
-      <img id='blog-logo' src="/assets/IBR_logo.png">
-      <%= render 'home/admin_login' %>
-    </div>
+<div id='blog-header'>
+  <img id='blog-logo' src="/assets/IBR_logo.png">
+  <%= render 'home/admin_login' %>
+</div>
 
-    <div id='post-wrapper'>
-      <p id='post-title'>
-        <%= @post.title %>
-      </p>
+<div id='post-wrapper'>
+  <p id='post-title'>
+    <%= @post.title %>
+  </p>
 
-      <p id='post-author'>
-        by <%= @post.author %>
-      </p>
+  <p id='post-author'>
+    by <%= @post.author %>
+  </p>
 
-      <p id='post-body'>
-        <%= @post.body %>
-      </p>
+  <p id='post-body'>
+    <%= @post.body %>
+  </p>
 
-      <%= render 'posts/edit_delete', post: @post %>
-      <%= render 'posts/back_button' %>
-    </div>
-
-  </div>
+  <%= render 'posts/edit_delete', post: @post %>
+  <%= render 'posts/back_button' %>
 </div>
