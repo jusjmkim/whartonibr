@@ -1,22 +1,8 @@
 @import 'colors';
 
-#image-holder-post-index{
-  background-image: url('huntsman.jpg');
-  width: 100%;
-  height: 80em;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-#dark-gray-layer{
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-}
-
 .column{
-  width: 25%;
-  margin: 0 4%;
-  margin-top: 12%;
+  width: 30%;
+  margin: 12% 10%;
 }
 
 .blog-bar{
@@ -38,6 +24,7 @@
 
 #blog-logo{
   width: 240px;
+  margin-bottom: 10px;
 }
 
 #new-post{
@@ -45,11 +32,15 @@
   font-size: 2em;
 }
 
-.column-title{
+h2.column-title{
   color: $red;
-  margin: 0 auto;
-  width: 75%;
   position: fixed;
+  font-size: 3em;
+}
+
+div.column-title{
+  margin: 0 auto 6em;
+  width: 50%;
 }
 
 .column-body{
@@ -63,7 +54,7 @@
 }
 
 .body{
-  color: white;
+  color: black;
 }
 
 .edit-delete-post{

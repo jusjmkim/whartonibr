@@ -10,12 +10,8 @@ class Post < ActiveRecord::Base
     Post.find_posts('feature')
   end
 
-  def self.editor_notes
-    Post.find_posts('editor notes')
-  end
-
   def self.story_types
-    ['story', 'feature', 'editor notes']
+    ['story', 'feature']
   end
 
   def self.find_post(params)

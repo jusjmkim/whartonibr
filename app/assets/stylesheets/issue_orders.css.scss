@@ -1,10 +1,32 @@
 @import 'colors';
 
-.title {
-    color: $red;
-    font-size: 2em;
-    margin: auto;
+#image-holder-new-issue{
+  background-image: url('huntsman.jpg');
+  width: 100%;
+  height: 80em;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+#dark-gray-layer{
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+
+#purchase-title {
+  color: $red;
+  font-size: 4em;
+  font-family: 'Gotham';
+  margin: 0 auto;
+  text-align: center;
+}
+
+#stripe_error{
+  background-color: white;
+  color: $red;
+  font-size: 2em;
+}
+
 .errors {
   color: $red;
 }
@@ -24,4 +46,9 @@
       color: #232525;
 
     }
+}
+
+.notice {
+  color: $red;
+  font-size: 5em;
 }

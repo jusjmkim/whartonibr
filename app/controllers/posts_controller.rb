@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   def index
     @stories = Post.stories
     @features = Post.features
-    @editor_notes = Post.editor_notes
   end
 
   def new

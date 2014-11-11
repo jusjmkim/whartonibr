@@ -1,23 +1,18 @@
-<div id='image-holder-post-index'>
-  <div id='dark-gray-layer'>
-    <div id='blog-header'>
-      <img id='blog-logo' src="/assets/IBR_logo.png">
-      <%= render 'home/admin_login' %>
-    </div>
+<div id='blog-header'>
+  <img id='blog-logo' src="/assets/IBR_logo.png">
+  <%= render 'home/admin_login' %>
+</div>
 
-    <div class='column' id='stories'>
-      <h2 class='column-title content'>STORIES</h2>
-      <%= render 'posts/posts', posts: @stories %>
-    </div>
-
-    <div class='column' id='features'>
-      <h2 class='column-title content'>FEATURES</h2>
-      <%= render 'posts/posts', posts: @features %>
-    </div>
-
-    <div class='column' id='editor-notes'>
-      <h2 class='column-title content'>EDITOR'S NOTES</h2>
-      <%= render 'posts/posts', posts: @editor_notes %>
-    </div>
+<div class='column' id='stories'>
+  <div class='column-title'>
+    <h2 class='column-title content'>STORIES</h2>
   </div>
+  <%= render 'posts/posts', posts: @stories %>
+</div>
+
+<div class='column' id='features'>
+  <div class='column-title'>
+    <h2 class='column-title content'>FEATURES</h2>
+  </div>
+  <%= render 'posts/posts', posts: @features %>
 </div>

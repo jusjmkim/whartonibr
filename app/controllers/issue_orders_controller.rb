@@ -15,6 +15,10 @@ class IssueOrdersController < ApplicationController
       if @issue_order.save
         @pdf_token = @issue_order.pdf_token
         PdfMailer.pdf_email(params['issue_order']['email'], @issue_order).deliver
+
+        respond_to do |format|
+          format.html { redirect_to @post, notice: 'Issue was successfully bought.' }
+        end
       else 
         flash[:error] = []
         @issue_order.errors.full_messages.each do |error_message|

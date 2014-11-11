@@ -1,6 +1,6 @@
 class IssuesController < ApplicationController
   def index
-    @issues = Issue.all.order('created_at ASC')
+    @issues = Issue.all.order('created_at DESC')
   end
 
   def new

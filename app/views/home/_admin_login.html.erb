@@ -1,6 +1,4 @@
 <% if admin_signed_in? %>
   <%= link_to 'LOG OUT', '/admins/sign_out', method: :delete, class: 'blog-bar' %>
   <%= link_to 'New Post', new_post_path, class: 'blog-bar' %>
-<% else %>
-  <%= link_to 'LOGIN',  '/admins/sign_in', class: 'blog-bar' %>
 <% end %>
