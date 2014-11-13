@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :authenticate_admin!, on: [:new, :create, :edit, :update, :destroy]
+  before_filter :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @stories = Post.stories
