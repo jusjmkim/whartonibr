@@ -1,8 +1,10 @@
 <% posts.each do |post| %>
   <div class='column-body' data-toggle='modal' data-target="#modal-content-<%= post.id %>">
-    <a id="<%= post.id %>" href="<%= post_path(post) %>" class='post-preview'><p class='title'><%= post.title %></p>
-    <p class='author'><%= post.author %></p>
-    <p class='body post-content'><%= post.preview %></p></a>
+    <a id="<%= post.id %>" href="<%= post_path(post) %>" class='post-preview'>
+      <div class='title'><%= post.title %></div>
+      <div class='author'>BY <%= post.author %></div>
+      <div class='body post-content'><%= post.preview %></div>
+    </a>
     <%= render 'posts/edit_delete', post: post %>
   </div>
 
