@@ -14,16 +14,19 @@
 
 #post-title{
   color: $red;
-  font-size: 5em;
+  font-size: 4em;
   margin: 0 auto;
   text-align: center;
+  font-family: 'Gotham';
+  font-style: bold;
 }
 
 #post-author{
   color: $red;
   margin: 0 auto;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
+  font-family: 'Gotham';
 }
 
 #post-body{
@@ -31,13 +34,19 @@
 }
 
 /* modal styling */
+#modal-content{
+  margin-top: 200px;
+}
+
 .modal-dialog{
   width: 80%;
 }
 
 #post-title-modal{
   color: $red;
-  font-size: 5em;
+  font-size: 4em;
   text-align: center;
   margin: 0 auto;
+  font-family: 'Gotham';
+  font-style: bold;
 }

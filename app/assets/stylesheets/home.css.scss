@@ -3,6 +3,8 @@
 #slides
 {
   display:none;
+  height: 100%;
+  width: 100%;
 }
 
 .slidesjs-navigation{
@@ -68,10 +70,8 @@ body {
     }
 
     .slidesjs-pagination {
-      // margin: 6px 0 0;
-      // float: right;
       list-style: none;
-      width: 170px;
+      width: 100%;
       margin: auto;
       position: absolute;
       bottom: 100px;
