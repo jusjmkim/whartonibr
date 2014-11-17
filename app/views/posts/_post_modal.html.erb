@@ -15,7 +15,7 @@
         </p>
 
         <p id='post-body'>
-          <%= post.body %>
+          <%= h(post.body).gsub(/\n/, '<br />').html_safe %>
         </p>
 
         <%= render 'posts/edit_delete', post: post %>
