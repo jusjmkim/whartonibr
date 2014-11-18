@@ -59,7 +59,7 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :author, :body, :story_type)
+      params.require(:post).permit(:title, :author, :body, :story_type, :image)
     end
 
     def sanitized_params

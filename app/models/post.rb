@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :title, :author, :story_type, :body
+  attr_accessible :title, :author, :story_type, :body, :image
   validates :title, :author, :body, :story_type, presence: true
 
   def self.stories

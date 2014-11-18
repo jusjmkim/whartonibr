@@ -21,7 +21,7 @@
     <%= f.text_field :author %>
   </div>
 
-  <div class="field">
+  <div class='field'>
     <%= f.label :body %><br>
     <%= f.text_area :body %>
   </div>
@@ -29,6 +29,11 @@
   <div class='field'>
     <%= f.label :story_type %><br>
     <%= f.select :story_type, Post.story_types, include_blank: true, allow_blank: false %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
   </div>
 
   <div class="actions" id='submit'>

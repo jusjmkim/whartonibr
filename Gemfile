@@ -29,6 +29,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'binding_of_caller'
   gem 'figaro'
+  gem 'capybara'
 end
 
 group :development do
