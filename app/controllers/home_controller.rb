@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
+    @stories = Post.stories
+    @features = Post.features
   end
 
   def about 
