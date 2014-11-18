@@ -2,7 +2,7 @@
 
 #slides
 {
-  display: none;
+  display: inline;
   height: 100%;
   width: 100%;
 }
@@ -51,7 +51,7 @@ body {
     }
 
     #slides {
-      display: none
+      display: inline;
     }
 
     #slides .slidesjs-navigation {
@@ -71,8 +71,8 @@ body {
 
     .slidesjs-pagination {
       list-style: none;
-      width: 100%;
-      margin: auto;
+      width: 20%;
+      margin: auto auto 3em;
       position: absolute;
       bottom: 100px;
       left: 42%;
