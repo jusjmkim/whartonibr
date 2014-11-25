@@ -11,11 +11,10 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-app.config.assets.path << Rails.root.join('vendor', 'assets', 'fonts')
-app.config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
-
 module Ibr
   class Application < Rails::Application
+    app.config.assets.path << Rails.root.join('vendor', 'assets', 'fonts')
+    app.config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
