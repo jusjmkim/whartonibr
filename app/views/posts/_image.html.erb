@@ -1,0 +1,7 @@
+<% unless post.image.url == '/images/original/missing.png' %>
+  <% if post.story_type == 'story' %>
+    <%= image_tag post.image.url(:small), class: 'story-image column-image' %>
+  <% elsif post.story_type == 'feature' %>
+    <%= image_tag post.image.url(:small), class: 'feature-image column-image'  %>
+  <% end %>
+<% end %>

@@ -1,23 +1,23 @@
 @import 'colors';
 @import 'fonts';
 
-#image-holder-post-new{
+#image-holder-post-form {
   background-image: url('huntsman.jpg');
 }
 
-.column{
-  width: 30%;
-  margin: 0% 10% 12%;
+.column {
+  width: 40%;
+  margin: 0% 5% 12%;
 }
 
-.blog-bar{
+.blog-bar {
   color: $red;
   font-size: 2em;
   margin-right: 5%;
   float: right;
 }
 
-#blog-header{
+#blog-header {
   position: fixed; 
   top: 20px;
   left: 30px;
@@ -27,37 +27,46 @@
   color: $red;
 }
 
-#blog-logo{
+#blog-logo {
   width: 240px;
 }
 
-#new-post{
+#new-post {
   color: $red;
   font-size: 2em;
 }
 
-#post-index-title{
+#post-index-title {
   color: $red;
   font-family: 'Gotham Ultra';
   font-size: 4.5em;
   text-align: center;
 }
 
-h2.column-title{
+h2.column-title {
   color: $red;
   font-size: 3em;
 }
 
-div.column-title{
+div.column-title {
   margin-bottom: 6em;
   text-align: center;
 }
 
-.column-body{
+.column-body {
   margin-top: 3em;
+  width: 100%;
 }
 
-.title{
+.story-column {
+  float: left;
+}
+
+.feature-column {
+  float: right;
+}
+
+.title {
   color: $red;
   font-weight: bold;
   font-family: gotham;
@@ -65,19 +74,19 @@ div.column-title{
   line-height: 0.9em;
 }
 
-.author{
+.author {
   color: $red;
   font-family: gotham;
   font-size: 1.2em;
 }
 
-.body{
+.body {
   color: black;
   margin-top: 1em;
   font-size: 1.5em;
 }
 
-.edit-delete-post{
+.edit-delete-post {
   color: $red;
   font-size: 1.2em;
 }
@@ -92,4 +101,16 @@ a:hover {
 
 .body:hover {
   color: #A9A9A9;
+}
+
+.column-image {
+  margin-bottom: 1px;
+}
+
+.story-image {
+  float: left;
+}
+
+.feature-image {
+  float: right;
 }
