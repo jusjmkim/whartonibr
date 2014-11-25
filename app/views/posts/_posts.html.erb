@@ -3,6 +3,9 @@
     <a id="<%= post.id %>" href="<%= post_path(post) %>" class='post-preview'>
       <div class='title'><%= post.title %></div>
       <div class='author'>BY <%= post.author %></div>
+      <% unless post.image.url == '/images/original/missing.png' %>
+        <%= image_tag post.image.url %>
+      <% end %>
       <div class='body'><%= post.preview %></div>
     </a>
     <%= render 'posts/edit_delete', post: post %>

@@ -29,8 +29,7 @@ Ibr::Application.configure do
   config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')  
   config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
   
-  # Paperclip for PDF uploads
-  Paperclip.options[:command_path] = "/usr/local/bin/"
+  # Paperclip for PDF and image uploads
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
@@ -39,8 +38,6 @@ Ibr::Application.configure do
       :secret_access_key => ENV['AWSSEC']
     }
   }
-  Paperclip::Attachment.default_options[:url] = ':s3_domain_url'
-  Paperclip::Attachment.default_options[:path] = '/:class/:attachment/:id_partition/:style/:filename'
 
   #ActionMailer config 
   

@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   attr_accessible :title, :author, :story_type, :body, :image
   validates :title, :author, :body, :story_type, presence: true
+  has_attached_file :image
 
   def self.stories
     Post.find_posts('story')
