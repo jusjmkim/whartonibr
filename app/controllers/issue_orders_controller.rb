@@ -17,7 +17,7 @@ class IssueOrdersController < ApplicationController
         PdfMailer.pdf_email(params['issue_order']['email'], @issue_order).deliver
 
         respond_to do |format|
-          format.html { redirect_to @post, notice: 'Issue was successfully bought.' }
+          format.html { redirect_to root, notice: 'Issue was successfully bought.' }
         end
       else 
         flash[:error] = []

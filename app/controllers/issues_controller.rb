@@ -1,4 +1,6 @@
 class IssuesController < ApplicationController
+  before_filter :authenticate_admin!, only: [:new, :create, :edit_all, :update]
+
   def index
     @issues = Issue.all.order('created_at DESC')
   end

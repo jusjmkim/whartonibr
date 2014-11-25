@@ -10,14 +10,14 @@
 Issue.delete_all
 Highlight.delete_all
 
-issue_0 = Issue.create(name: "Fall 2009", title: "History of Our Financial Crises", issue_img: "Fall 2009.jpg")
-issue_01 = Issue.create(name: "Fall 2010", title: "Debt Crisis in Europe", issue_img: "Fall 2010.jpg")
-issue_1 = Issue.create(name: "Spring 2010", title: "The Future of Financial Regulation", issue_img: "Spring 2010.jpg")
-issue_2 = Issue.create(name: "Spring 2012", title: "The Changing Face of the World", issue_img: "Spring 2012.jpg")
-issue_3 = Issue.create(name: "Winter 2012", title: "Technology: What's Next?", issue_img: "Winter 2012.jpg")
-issue_4 = Issue.create(name: "Spring 2013", title: "The Debt Nexus", issue_img: "Spring 2013.jpg")
-issue_5 = Issue.create(name: "Autumn / Winter 2013", title: "Luxury", issue_img: "Fall 2013.jpg")
-issue_6 = Issue.create(name: 'Spring / Summer 2014', title: 'Defining Leadership', issue_img: 'Spring 2014.png')
+issue_0 = Issue.create(name: "Fall 2009", title: "History of Our Financial Crises", issue_img: "Fall 2009.jpg", volume: 1)
+issue_01 = Issue.create(name: "Fall 2010", title: "Debt Crisis in Europe", issue_img: "Fall 2010.jpg", volume: 2)
+issue_1 = Issue.create(name: "Spring 2010", title: "The Future of Financial Regulation", issue_img: "Spring 2010.jpg", volume: 3)
+issue_2 = Issue.create(name: "Spring 2012", title: "The Changing Face of the World", issue_img: "Spring 2012.jpg", volume: 4)
+issue_3 = Issue.create(name: "Winter 2012", title: "Technology: What's Next?", issue_img: "Winter 2012.jpg", volume: 5)
+issue_4 = Issue.create(name: "Spring 2013", title: "The Debt Nexus", issue_img: "Spring 2013.jpg", volume: 6)
+issue_5 = Issue.create(name: "Autumn / Winter 2013", title: "Luxury", issue_img: "Fall 2013.jpg", volume: 7)
+issue_6 = Issue.create(name: 'Spring / Summer 2014', title: 'Defining Leadership', issue_img: 'Spring 2014.png', volume: 8)
 
 highlight_0 = Highlight.create(issue_id: issue_0.id,
                               title: "Interview with Jeremy Siegel, Professor of Finance, Wharton School Interviewed by
