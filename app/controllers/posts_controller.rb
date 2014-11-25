@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  include ActionView::Helpers::TextHelper
   before_filter :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -16,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(sanitized_params)
+    @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
@@ -60,13 +59,6 @@ class PostsController < ApplicationController
   private
     def post_params
       params.require(:post).permit(:title, :author, :body, :story_type, :image)
-    end
-
-    def sanitized_params
-      new_params = post_params
-      new_params['body'] = simple_format(post_params['body'])
-
-      return new_params
     end
 
 end
