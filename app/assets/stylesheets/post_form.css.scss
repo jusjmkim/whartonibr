@@ -1,8 +1,7 @@
 @import 'colors';
 
 #post-form-title{
-  width: 20%;
-  margin: 0 auto;
+  text-align: center;
   color: $red;
   font-size: 5em;
 }
@@ -11,6 +10,11 @@
   width: 50%;
   margin: 0 auto;
   font-size: 1.2em;
+}
+
+#new-post {
+  color: $red;
+  font-size: 2em;
 }
 
 .edit_post{
@@ -33,4 +37,19 @@
   color: #b94a48;
   text-align: left;
   padding-left: 5%;
+}
+
+label {
+  color: $red;
+  font-size: 2em;
+  display: inline;
+}
+
+br {
+  line-height: 2em;
+}
+
+#dark-gray-layer{
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
 }

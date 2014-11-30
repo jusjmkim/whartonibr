@@ -1,3 +1,8 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'post_form' %>
+  <%= stylesheet_link_tag 'submit_button' %>
+<% end %>
+
 <%= form_for @post, url: "/posts/#{@post.id}" do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation" >
