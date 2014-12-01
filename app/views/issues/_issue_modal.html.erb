@@ -1,0 +1,18 @@
+<div id="issue-<%= issue.id %>-modal" class="reveal-modal">
+  <a href="#" class="close-reveal-modal">x</a>
+  <div class="row issue-container-modal">
+    <div class="large-3 columns issue-preview-and-purchase">
+      <img src="<%= image_path issue.issue_img %>" class="issue-image-modal">
+      <a href="<%= new_issue_issue_order_path(issue_id: issue.id) %>" class="purchase-issue-link">Purchase this Issue ($3.99)</a>
+    </div>
+    <div class="large-9 columns">
+      <span class="issue-title-modal"><%= issue.title %></span>
+      <span class="issue-name-modal"><em>International Business Review <%= issue.name %></em></span>
+      <p class="highlights-header">Highlights</p>
+      <% issue.highlights.each do |highlight| %>
+          <span class="highlight-title"><%= highlight.title %></span>
+          <p class="highlight-description"><%= highlight.description %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -10,33 +10,6 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require foundation
 //= require jquery.slides.min
-//= require layout
-//= require posts
-
-$(function(){ $(document).foundation(); });
-
-$(function(){
-      $("#slides").slidesjs({
-        width: 940,
-        height: 500,
-        pagination: {
-          active: true,
-        },
-        navigation: {
-          active: false
-        },
-        play: {
-          active: true,
-          effect: 'fade',
-          interval: 5000,
-          auto: true,
-          swap: true
-        },
-        effect: {
-          fade: {
-            speed: 5000
-          }
-        }
-      });
-    });

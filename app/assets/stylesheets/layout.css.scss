@@ -217,3 +217,9 @@ body{
   margin-right: 5%;
   float: right;
 }
+
+label {
+  color: $red;
+  font-size: 2em;
+  display: inline;
+}

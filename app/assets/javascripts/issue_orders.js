@@ -44,5 +44,11 @@ var issueOrder = {
       $('#stripe_error').text(response.error.message);
       $('input[type=submit]').attr('disabled', false)
     }
+
+    redirectToRoot();
   }
+}
+
+function redirectToRoot() {
+  window.location.href = '/';
 }
