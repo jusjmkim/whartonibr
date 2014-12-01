@@ -1,20 +1,22 @@
-<% posts.each do |post| %>
+<div class='article-column'>
+  <% posts.each do |post| %>
 
-  <% if post.story_type == 'story' %>
-    <div class='column-body story-column' data-toggle='modal' data-target="#modal-content-<%= post.id %>">
-  <% elsif post.story_type == 'feature' %>
-    <div class='column-body feature-column' data-toggle='modal' data-target="#modal-content-<%= post.id %>">
+    <% if post.story_type == 'story' %>
+      <div class='column-body story-column' data-toggle='modal' data-target="#modal-content-<%= post.id %>">
+    <% elsif post.story_type == 'feature' %>
+      <div class='column-body feature-column' data-toggle='modal' data-target="#modal-content-<%= post.id %>">
+    <% end %>
+
+      <%= render 'posts/image', { post: post, image_type: :square } %>
+      <a id="<%= post.id %>" href="<%= post_path(post) %>" class='post-preview'>
+        <div class='title'><%= post.title %></div>
+        <div class='author'>BY <%= post.author %></div>
+        <div class='body'><%= post.preview %></div>
+      </a>
+      <%= render 'posts/edit_delete', post: post %>
+    </div>
+
+    <%= render 'posts/post_modal', post: post %>
+    <br>
   <% end %>
-
-    <%= render 'posts/image', post: post %>
-    <a id="<%= post.id %>" href="<%= post_path(post) %>" class='post-preview'>
-      <div class='title'><%= post.title %></div>
-      <div class='author'>BY <%= post.author %></div>
-      <div class='body'><%= post.preview %></div>
-    </a>
-    <%= render 'posts/edit_delete', post: post %>
-  </div>
-
-  <%= render 'posts/post_modal', post: post %>
-  <br>
-<% end %>
+</div>

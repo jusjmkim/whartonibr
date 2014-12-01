@@ -6,19 +6,26 @@
           <img id='blog-logo' src="/assets/IBR_logo.png">
         </div>
 
-        <p id='post-title-modal'>
-          <%= post.title %>
-        </p>
-        <p id='post-author'>
-          BY <%= post.author %>
-        </p>
+        <div class='column'>
+          <p id='post-title-modal'>
+            <%= post.title %>
+          </p>
+          <p id='post-author'>
+            BY <%= post.author %>
+          </p>
 
-        <p id='post-body'>
-          <%= h(post.body).gsub(/\n/, '<br />').html_safe %>
-        </p>
+          <p>
+            <%= render 'posts/image', { post: post, image_type: :scale } %>
+          </p>
 
-        <%= render 'posts/edit_delete', post: post %>
-        <%= render 'posts/back_button' %>
+          <p id='post-body'>
+            <%= h(post.body).gsub(/\n/, '<br />').html_safe %>
+          </p>
+
+          <%= render 'posts/edit_delete', post: post %>
+          <%= render 'posts/back_button' %>
+        </div>
+
       </div>
     </div>
   </div>

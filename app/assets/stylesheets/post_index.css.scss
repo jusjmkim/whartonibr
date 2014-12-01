@@ -11,6 +11,7 @@
   font-family: 'Gotham Ultra';
   font-size: 4.5em;
   text-align: center;
+  margin-top: 2%;
 }
 
 h2.column-title {
@@ -19,7 +20,7 @@ h2.column-title {
 }
 
 div.column-title {
-  margin-bottom: 6em;
+  margin-bottom: 3em;
   text-align: center;
 }
 
@@ -36,17 +37,28 @@ div.column-title {
   float: right;
 }
 
+.article-column {
+  width: 100%;
+  margin-top: 0px;
+}
+
+.post-preview {
+  margin: 0 auto;
+}
+
 .title {
   color: $red;
   font-family: 'Gotham Bold';
   font-size: 2em;
   line-height: 0.9em;
+  text-align: center;
 }
 
 .author {
   color: $red;
   font-family: 'Gotham Medium';
-  font-size: 1.2em;
+  font-size: 1.5em;
+  text-align: center;
 }
 
 .body {
@@ -74,6 +86,7 @@ a:hover {
 
 .column-image {
   margin-bottom: 1px;
+  padding: 25px;
 }
 
 .story-image {
@@ -82,4 +95,8 @@ a:hover {
 
 .feature-image {
   float: right;
+}
+
+.modal-image {
+  margin: 0 auto;
 }
