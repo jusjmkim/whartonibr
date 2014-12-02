@@ -3,7 +3,7 @@
   <% if image_type.to_s == 'square' %>
     <%= image_tag post.image.url(:square), class: "#{post.story_type}-image column-image" %>
   <% elsif image_type.to_s == 'scale' %>
-    <%= image_tag post.image.url(:scale), class: 'modal-image column-image' %>
+    <%= image_tag post.image.url(:scale), class: 'column-image' %>
   <% end %>
 
 <% end %>

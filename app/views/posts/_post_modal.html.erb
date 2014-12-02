@@ -6,7 +6,7 @@
           <img id='blog-logo' src="/assets/IBR_logo.png">
         </div>
 
-        <div class='column'>
+        <!-- <div class='column'> -->
           <p id='post-title-modal'>
             <%= post.title %>
           </p>
@@ -14,9 +14,9 @@
             BY <%= post.author %>
           </p>
 
-          <p>
+          <div class='modal-image'>
             <%= render 'posts/image', { post: post, image_type: :scale } %>
-          </p>
+          </div>
 
           <p id='post-body'>
             <%= h(post.body).gsub(/\n/, '<br />').html_safe %>
@@ -24,7 +24,7 @@
 
           <%= render 'posts/edit_delete', post: post %>
           <%= render 'posts/back_button' %>
-        </div>
+        <!-- </div> -->
 
       </div>
     </div>
