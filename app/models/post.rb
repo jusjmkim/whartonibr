@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   attr_accessible :title, :author, :story_type, :body, :image
   validates :title, :author, :body, :story_type, presence: true
   has_attached_file :image, styles: { square: '320x320#',
-                                      scale: '400x>' }
+                                      scale: '450x>' }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   def self.stories

@@ -1,6 +1,6 @@
 <% if admin_signed_in? %>
   <div class='edit-delete-post'>
     <%= link_to 'Edit', edit_post_path(post), class: 'edit-delete-post' %> | 
-    <%= link_to 'Delete', post, data: { confirm: 'Are you sure?'}, method: :delete, class: 'edit-delete-post' %>
+    <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?'}, class: 'edit-delete-post' %>
   </div>
 <% end %>
