@@ -8,7 +8,7 @@
         <div class='image-container'>
           <%= render 'posts/image', { post: post, image_type: 'scale' } %>
         </div>
-        <div class='body'><%= post.preview %></div>
+        <div class='body'><%= sanitize_post post.preview %></div>
       </a>
     </div>
 
