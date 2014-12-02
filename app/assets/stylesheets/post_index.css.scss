@@ -37,9 +37,13 @@ div.column-title {
   float: right;
 }
 
+.image-column {
+  float: left;
+  display: inline;
+}
+
 .article-column {
   width: 100%;
-  margin-top: 0px;
 }
 
 .post-preview {
@@ -85,19 +89,21 @@ a:hover {
 }
 
 .column-image {
-  margin-bottom: 1px;
-  padding: 25px;
+  padding: 2em;
+  margin: 0 auto;
 }
 
 .story-image {
   float: left;
+  margin: auto 0;
 }
 
 .feature-image {
   float: right;
+  margin-bottom: 10em;
 }
 
-.modal-image {
+.image-container {
   width: 320px;
   margin: 0 auto;
 }
