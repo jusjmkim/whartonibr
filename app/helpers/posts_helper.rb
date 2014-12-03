@@ -1,7 +1,7 @@
 module PostsHelper
 
   def sanitize_post(post)
-    sanitize post, tags: ['br', 'b', 'i', 'u']
+    sanitize post, tags: ['br', 'b', 'i', 'u', 'a']
   end
 
   def sanitize_preview(post)
