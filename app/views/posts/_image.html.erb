@@ -1,9 +1,9 @@
 <% unless post.image.url == '/images/original/missing.png' %>
 
-  <% if image_type == 'square' %>
-    <%= image_tag post.image.url(:square), class: "#{post.story_type}-image column-image" %>
-  <% elsif image_type == 'scale' %>
+  <% if image_type == 'scale' %>
     <%= image_tag post.image.url(:scale), class: 'column-image' %>
+  <% elsif image_type == 'modal' %>
+    <%= image_tag post.image.url(:modal), class: 'column-image' %>
   <% end %>
 
 <% end %>

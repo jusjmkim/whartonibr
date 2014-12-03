@@ -61,6 +61,7 @@ div.column-title {
 }
 
 .body {
+  width: 100%;
   color: black;
   margin-top: 1em;
   font-size: 1.5em;
@@ -88,17 +89,13 @@ a:hover {
   margin: 0 auto;
 }
 
-.story-image {
-  float: left;
-  margin: auto 0;
-}
-
-.feature-image {
-  float: right;
-  margin-bottom: 10em;
-}
-
 .image-container {
+  display: block;
   width: 450px;
+  margin: 0 auto;
+}
+
+.modal-image-container {
+  width: 500px;
   margin: 0 auto;
 }

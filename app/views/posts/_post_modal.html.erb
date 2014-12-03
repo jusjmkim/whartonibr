@@ -13,12 +13,12 @@
             BY <%= post.author %>
           </p>
 
-          <div class='image-container'>
-            <%= render 'posts/image', { post: post, image_type: 'scale' } %>
+          <div class='modal-image-container'>
+            <%= render 'posts/image', { post: post, image_type: 'modal' } %>
           </div>
 
           <p id='post-body'>
-            <%= sanitize_post post.body.gsub(/\n/, '<br />') %>
+            <%= sanitize_post post.body %>
           </p>
 
           <%= render 'posts/edit_delete', post: post %>
