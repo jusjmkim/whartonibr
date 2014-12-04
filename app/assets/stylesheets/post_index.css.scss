@@ -1,17 +1,13 @@
 @import 'colors';
 @import 'fonts';
 
-.column {
-  width: 40%;
-  margin: 0% 5% 12%;
-}
-
 #post-index-title {
   color: $red;
   font-family: 'Gotham Ultra';
   font-size: 4.5em;
+  width: 20%;
+  margin: 2% auto 0;
   text-align: center;
-  margin-top: 2%;
 }
 
 h2.column-title {
@@ -22,6 +18,11 @@ h2.column-title {
 div.column-title {
   margin-bottom: 3em;
   text-align: center;
+}
+
+.column {
+  width: 40%;
+  margin: 0% 5% 12%;
 }
 
 .column-body {
