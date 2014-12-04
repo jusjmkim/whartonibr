@@ -1,7 +1,16 @@
 @import 'colors';
 
-#slides
-{
+#arrow {
+  position: relative;
+  width: 10%;
+  height: 10%;
+  float: right;
+  bottom: 12em;
+  z-index: 99;
+}
+
+
+#slides {
   display: inline;
   height: 100%;
   width: 100%;
