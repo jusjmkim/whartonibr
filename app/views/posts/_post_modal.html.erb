@@ -18,7 +18,7 @@
           </div>
 
           <p id='post-body'>
-            <%= sanitize_post post.body %>
+            <%= sanitize_post post.body.gsub(/\n/, '<br>') %>
           </p>
 
           <%= render 'posts/edit_delete', post: post %>
