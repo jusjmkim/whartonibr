@@ -22,20 +22,22 @@ div.column-title {
 
 .column {
   width: 40%;
-  margin: 0% 5% 12%;
+  margin: 0% 2% 12%;
+}
+
+#features {
+  margin-left: -5%;
+  float: right;
+}
+
+#stories {
+  margin-left: 5%;
+  float: left;
 }
 
 .column-body {
   margin-top: 3em;
   width: 100%;
-}
-
-.story-column {
-  float: left;
-}
-
-.feature-column {
-  float: right;
 }
 
 .article-column {
@@ -93,3 +95,9 @@ a:hover {
   width: 500px;
   margin: 0 auto;
 }
+
+div.arrow {
+  color: $red;
+  font-size: 1.5em;
+}
+

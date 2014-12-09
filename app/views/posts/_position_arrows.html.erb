@@ -1,0 +1,6 @@
+<% if admin_signed_in? %>
+<div class='arrow' id="post-<%= post.id %>-arrows">
+    <span class='up arrow' id="up-<%= post.position %>">up</span> | 
+    <span class='down arrow' id="down-<%= post.position %>">down</span>
+  </div>
+<% end %>

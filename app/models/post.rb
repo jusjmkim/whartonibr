@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :title, :author, :story_type, :body, :image
+  attr_accessible :title, :author, :story_type, :body, :image, :post
   validates :title, :author, :body, :story_type, presence: true
   has_attached_file :image, styles: { scale: '450x>',
                                       modal: '500x>' }
