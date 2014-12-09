@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   before_filter :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @stories = Post.stories
-    @features = Post.features
+    @stories = Post.find_posts('story')
+    @features = Post.find_posts('feature')
   end
 
   def new
@@ -16,6 +16,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.position = Post.find_posts(post_params[:story_type]).last.position
 
     respond_to do |format|
       if @post.save
@@ -33,16 +34,25 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find_post(params)
-
     respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to '/#post-index', notice: 'Post was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
+      format.html {
+        @post = Post.find_post(params)
+        if @post.update(post_params)
+          redirect_to '/#post-index', notice: 'Post was successfully updated.'
+        end
+      }
+
+      format.json {
+        @current_post = Post.find(params[:currentPostId])
+        @target_post = Post.find(params[:targetPostId])
+
+        @current_post.position= params[:targetPostPosition]
+        @current_post.save
+        @target_post.position= params[:currentPostId]
+        @target_post.save
+
+        redirect_to '/#post-index'
+      }
     end
   end
 

@@ -5,14 +5,6 @@ class Post < ActiveRecord::Base
                                       modal: '500x>' }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  def self.stories
-    Post.find_posts('story')
-  end
-
-  def self.features
-    Post.find_posts('feature')
-  end
-
   def self.story_types
     ['story', 'feature']
   end
@@ -25,11 +17,11 @@ class Post < ActiveRecord::Base
     add_ellipsis(self.body.split(' ')[0..50].join(' '))
   end
 
-  private
-    def self.find_posts(type)
-      Post.where(story_type: type)
-    end
+  def self.find_posts(type)
+    Post.where(story_type: type).order(:position)
+  end
 
+  private
     def add_ellipsis(text)
       return text if text.size <= 50
       text + ' ...'

@@ -16,27 +16,48 @@ function displayModal(id) {
 function arrowListener() {
   $('span.arrow').click(function(e) {
     e.preventDefault();
-    console.log('arrow clicked');
     var data = $(this).attr('id').split('-');
     var id = $(this).parent().attr('id').split('-')[1];
-    changePosition(data);
-    updatePosition(id, data);
+    changePosition(data, id);
   });
 }
 
-function changePosition(data) {
-  var post = $("#post-position-" + data[1]); 
-  var belowPost = post.next().attr('class');
-  var abovePost = post.prev().attr('class');
-  if (data[0] === 'up' && abovePost === 'post-container') {
-    post.prev().before(post.detach());
-  } else if (data[0] === 'down' && belowPost === 'post-container') {
-    post.next().after(post.detach());
+function changePosition(data, id) {
+  var post = $("#post-position-" + data[1] + '-id-' + id); 
+  var belowPost = post.next();
+  var abovePost = post.prev();
+  var belowPostClass = belowPost.attr('class');
+  var abovePostClass = abovePost.attr('class');
+  if (data[0] === 'up' && abovePostClass === 'post-container') {
+    updatePosition(parsePosition(abovePost), parsePosition(post));
+    abovePost.before(post.detach());
+  } else if (data[0] === 'down' && belowPostClass === 'post-container') {
+    updatePosition(parsePosition(belowPost), parsePosition(post));
+    belowPost.after(post.detach());
   }
 }
 
-function updatePosition(id, data) {
+function parsePosition(post) {
+  var postId = post.attr('id').split('-');
+  var postData = {
+    position: postId[2],
+    id: postId[4]
+  }
 
+  return postData;
+}
+
+function updatePosition(targetPost, currentPost) {
+  $.ajax({
+    type: 'PATCH',
+    dataType: 'JSON',
+    url: '/posts/' + currentPost.id,
+    data: { targetPostId: targetPost.id,
+            targetPostPosition: targetPost.position,
+            currentPostId: currentPost.id,
+            currentPostPosition: currentPost.position
+    }
+  });
 }
 
 $(function() {

@@ -1,5 +1,5 @@
 <% posts.each do |post| %>
-<div class='post-container' id="post-position-<%= post.position %>">
+<div class='post-container' id="post-position-<%= post.position %>-id-<%= post.id %>">
   <div class="column-body <%= post.story_type %>-column" data-toggle='modal' data-target="#modal-content-<%= post.id %>">
 
     <div class='article-column'>
