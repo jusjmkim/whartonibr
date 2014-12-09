@@ -10,6 +10,11 @@
   text-align: center;
 }
 
+.column-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
 h2.column-title {
   color: $red;
   font-size: 3em;
@@ -22,16 +27,14 @@ div.column-title {
 
 .column {
   width: 40%;
-  margin: 0% 2% 12%;
+  margin: 0% 3% 12%;
 }
 
 #features {
-  margin-left: -5%;
   float: right;
 }
 
 #stories {
-  margin-left: 5%;
   float: left;
 }
 
