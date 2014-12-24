@@ -7,7 +7,9 @@
         </div>
 
           <p id='post-title-modal'>
-            <%= post.title %>
+            <a href="/posts/<%= post.id %>">
+              <%= post.title %>
+            </a>
           </p>
           <p id='post-author'>
             BY <%= post.author %>
