@@ -1,5 +1,6 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag 'post_show' %>
+  <%= stylesheet_link_tag 'post_index' %>
 <% end %>
 
 <div id='blog-header'>
@@ -15,6 +16,10 @@
   <p id='post-author'>
     BY <%= @post.author %>
   </p>
+
+  <div class='modal-image-container'>
+    <%= render 'posts/image', { post: @post, image_type: 'modal' } %>
+  </div>
 
   <p id='post-body'>
     <%= sanitize_post @post.body.gsub(/\n/, '<br>') %>
