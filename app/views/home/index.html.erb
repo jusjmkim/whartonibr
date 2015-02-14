@@ -5,13 +5,15 @@
 
 <div id='logo-holder'>
   <a href="/">
-    <img src='assets/IBR_logo.png'>
+    <div id='logo-container'>
+      <img id='blog-logo' src='assets/IBR_logo.png'>
+    </div>
   </a>
 </div>
 
 <div id='slides'>
   <% (1..6).each do |num| %>
-    <img src="assets/Homepage Images <%= num %>.jpg">
+    <img class='background-img' src="assets/Homepage Images <%= num %>.jpg">
   <% end %>
 </div>
 
