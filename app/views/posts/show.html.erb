@@ -17,6 +17,14 @@
     BY <%= @post.author %>
   </p>
 
+  <p id='post-date'>
+    Pubished on: <%= @post.created_at.to_date.strftime('%D') %>
+    <% unless @post.created_at == @post.updated_at %>
+      <br />
+      Updated on: <%= @post.updated_at.to_date.strftime('%D') %>
+    <% end %>
+  </p>
+
   <div class='modal-image-container'>
     <%= render 'posts/image', { post: @post, image_type: 'modal' } %>
   </div>
