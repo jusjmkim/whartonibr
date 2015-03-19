@@ -12,7 +12,7 @@ gem 'zurb-foundation'
 gem 'stripe'
 gem 'protected_attributes'
 gem "paperclip", "~> 3.0"
-gem 'aws-sdk-v1'
+gem 'aws-sdk', "< 2"
 gem 'devise'
 gem 'puma'
 
