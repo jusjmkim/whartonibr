@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
-gem 'rails', '4.0.0'
+ruby '2.2.1'
+gem 'rails', '4.2.0'
 gem 'pg'
 gem 'haml'
 gem 'jquery-rails'
@@ -12,9 +12,9 @@ gem 'zurb-foundation'
 gem 'stripe'
 gem 'protected_attributes'
 gem "paperclip", "~> 3.0"
-gem 'aws-sdk'
+gem 'aws-sdk-v1'
 gem 'devise'
-gem 'thin'
+gem 'puma'
 
 group :production do
   gem 'rails_12factor'
