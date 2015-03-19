@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_in) {|u| u.permit(:username, :encrypted_password)}
+    devise_parameter_sanitizer.for(:sign_in) {|u| u.permit(:username, :password)}
   end
 
   def after_sign_in_path_for(resource)
