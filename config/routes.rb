@@ -1,4 +1,4 @@
-Ibr::Application.routes.draw do
+Whartonibr::Application.routes.draw do
   root 'home#index'
   devise_for :admins
   match 'about', to: 'home#about', via: :get, as: 'about'

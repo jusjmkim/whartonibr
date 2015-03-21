@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Ibr::Application.config.secret_key_base = '6af02b363efef760144257d6054dd1a0670a7eebcb7fb382658895b188f396ad088d6cd06f48286bed262e23e9cae9fe26170db691a7eb65a14361bd49dc98a4'
+Whartonibr::Application.config.secret_key_base = '6af02b363efef760144257d6054dd1a0670a7eebcb7fb382658895b188f396ad088d6cd06f48286bed262e23e9cae9fe26170db691a7eb65a14361bd49dc98a4'
