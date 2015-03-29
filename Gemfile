@@ -11,8 +11,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'zurb-foundation'
 gem 'stripe'
 gem 'protected_attributes'
-gem "paperclip", "~> 4.2"
-gem 'aws-sdk', "< 2"
+gem 'paperclip', '~> 4.2'
+gem 'aws-sdk', '< 2'
 gem 'devise'
 gem 'puma'
 
