@@ -18,7 +18,7 @@ class Post < ActiveRecord::Base
   end
 
   def self.find_posts(type)
-    Post.where(story_type: type).order(:position)
+    Post.where(story_type: type).order('position ASC, created_at DESC').all
   end
 
   private
