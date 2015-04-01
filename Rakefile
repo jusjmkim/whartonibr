@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Ibr::Application.load_tasks
+Whartonibr::Application.load_tasks
