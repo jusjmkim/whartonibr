@@ -19,7 +19,7 @@
   display: none !important
 }
 
-#sponser-holder{
+#sponser-holder {
   position: fixed;
   bottom: 0px;
   right: 30px;
@@ -29,15 +29,14 @@
   color: $red;
 }
 
-img
-{
+img {
   background-size: cover;
 }
 
 body {
-      -webkit-font-smoothing: antialiased;
-      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #232525;
+  -webkit-font-smoothing: antialiased;
+  font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #232525;
 }
 
 #slides {
