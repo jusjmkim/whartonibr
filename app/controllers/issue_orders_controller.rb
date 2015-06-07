@@ -24,13 +24,9 @@ class IssueOrdersController < ApplicationController
     end
   end
 
-  def exchange_token_for_pdf
-    issue_order = IssueOrder.where(pdf_token: params[:token]).first
-    if issue_order
-      data = open issue_order.issue.pdf.url
-      send_data data.read, filename: issue_order.issue.pdf_file_name, type: "application/pdf", disposition: 'inline', stream: 'true', buffer_size: '4096'
-    else
-      p 'PDF not found'
-    end
+  def get_pdf
+    issue = Issue.find(params[:issue_id])
+    data = open issue.pdf.url
+    send_data data.read, filename: issue_order.issue.pdf_file_name, type: "application/pdf", disposition: 'inline', stream: 'true', buffer_size: '4096'
   end
 end

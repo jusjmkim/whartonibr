@@ -16,4 +16,5 @@ class Issue < ActiveRecord::Base
   attr_accessible :name, :pdf, :issue_img, :title
   has_many :highlights
   has_attached_file :pdf
+  validates_attachment_content_type :pdf, content_type: ['application/pdf']
 end

@@ -3,7 +3,7 @@
   <div class="row issue-container-modal">
     <div class="large-3 columns issue-preview-and-purchase">
       <img src="<%= image_path issue.issue_img %>" class="issue-image-modal">
-      <a href="<%= new_issue_issue_order_path(issue_id: issue.id) %>" class="purchase-issue-link">Get this Issue</a>
+      <%= link_to "Download this issue", issue.pdf.url(:original, false) %>
     </div>
     <div class="large-9 columns">
       <span class="issue-title-modal"><%= issue.title %></span>
