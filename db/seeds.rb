@@ -109,7 +109,7 @@ highlight_11 = Highlight.create(issue_id: issue_6.id,
                                 title: "China's Crossroads: Leadership in Transformation",
                                 description: "Robust economic growth has been the prime focus of the Chinese government for the past two decades. However, China has reached a new stage where the government, led by President Xi Jinping, must redefine its visions for the future and confront domestic issues.")
 highlight_12 = Highlight.create(issue_id: issue_6.id,
-                                title: "A View of Leadership from Behind the Lens with Photographer Platon antoniou",
+                                title: "A View of Leadership from Behind the Lens with Photographer Platon Antoniou",
                                 description: "Platon: \"People in power are realizing that they have to come up with new models of leadership. They have to readdress their core values...Compassion has not been part of the equation of being a good leader... in today’s society, that has to be the case now.\"")
 highlight_13 = Highlight.create(issue_id: issue_7.id,
                                 title: "High Altitude, High Yield: Sovereign Debt in Jaguar Economies",
