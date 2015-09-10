@@ -111,9 +111,9 @@ highlight_11 = Highlight.create(issue_id: issue_6.id,
 highlight_12 = Highlight.create(issue_id: issue_6.id,
                                 title: "A View of Leadership from Behind the Lens with Photographer Platon Antoniou",
                                 description: "Platon: \"People in power are realizing that they have to come up with new models of leadership. They have to readdress their core values...Compassion has not been part of the equation of being a good leader... in today’s society, that has to be the case now.\"")
-highlight_13 = HighLight.create(issue_id: issue_7.id,
+highlight_13 = Highlight.create(issue_id: issue_7.id,
                                 title: "High Altitude, High Yield: Sovereign Debt in Jaguar Economies",
                                 description: "In a world of zero interest rates and poor fixed income performance, the debt of certain Latin American countries like Peru and Colombia merit a closer look due to strong economic performance stemming from governmental and fiscal reforms.")
-highlight_14 = HighLight.create(issue_id: issue_7.id,
+highlight_14 = Highlight.create(issue_id: issue_7.id,
                                 title: "IBR Conversation with Yie-Hsin Hung",
                                 description: "Yie-Hsin Hung: \"The long-term nature of the investment management business suggests that all efforts take time to realize...The core value proposition of the business is to deliver excess returns for investors.\"")

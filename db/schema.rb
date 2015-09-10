@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20141208234215) do
 
-  create_table "admins", force: true do |t|
+  create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20141208234215) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
-  create_table "highlights", force: true do |t|
+  create_table "highlights", force: :cascade do |t|
     t.integer  "issue_id"
     t.string   "title"
     t.text     "description"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20141208234215) do
     t.datetime "updated_at"
   end
 
-  create_table "issue_orders", force: true do |t|
+  create_table "issue_orders", force: :cascade do |t|
     t.string   "email"
     t.integer  "issue_id"
     t.datetime "created_at"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20141208234215) do
     t.string   "pdf_token"
   end
 
-  create_table "issues", force: true do |t|
+  create_table "issues", force: :cascade do |t|
     t.string   "name"
     t.integer  "volume"
     t.datetime "created_at"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20141208234215) do
     t.string   "title"
   end
 
-  create_table "posts", force: true do |t|
+  create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.string   "author"
     t.text     "body"
